@@ -1,0 +1,51 @@
+Funcionalidades: 
+- Usuários do Sistema
+    Usuário Funcionário - Entrada / Saida / Pagamento
+    Usuário Administrador - Tudo + Precificações + Dados em Geral (Valores diários / mensal, quantidade de veiculo)
+ 
+- Número de Vagas
+    Definido pelo ADMINISTRADOR - Exibido para todos.
+- Entrada de Veículos
+    Categoria, Valor Hora, Placa, Marca e Modelo, Data e Hora (Automático)
+- Gerar Ticket 
+    Infos do Veículo + Hora de entrada + Infos Estacionamento
+- Formas de Pagamento
+    Formas de Pagamento em geral são exibidas
+- Saída de Veículos
+    Registro de entrada + Valor + Forma de pagamento
+
+TELAS:
+ * Toda Página tem: Menu Lateral 
+OK - Login
+- Home 
+    Total de vagas (Livres e Ocupadas)
+    Dashboard (Algumas infos do sistema)
+- Entrada (Estacionar)
+    Opção de cadastrar novo veículo
+    Campos para preenchimento da identificação do veículo
+    * Categoria, Valor Hora, Placa, Marca, Modelo, Data entrada, Data Saída (em aberto) e Tempo decorrido
+- Pós entrada:
+    Emissão do Ticket + Novo Ticket
+- Saída do Veículo
+    Exibe relatório dos veículos (TABELA)
+    Dashboard (Com número de vagas)
+
+
+
+placa
+nome do veiculo
+cor
+categoria
+estacionado? sim ou não
+hora entrada
+hora Saida
+valor (a cada 15 minutos)
+
+
+Funcionalidades: 
+ok - Usuários do Sistema
+ok - Número de Vagas
+- Entrada de Veículos
+- Gerar Ticket
+- Formas de Pagamento
+- Saída de Veículos
