@@ -45,7 +45,7 @@ valor (a cada 15 minutos)
 Funcionalidades: 
 ok - Usuários do Sistema
 ok - Número de Vagas
-- Entrada de Veículos
-- Gerar Ticket
+ok - Entrada de Veículos
+ok - Gerar Ticket
 - Formas de Pagamento
 - Saída de Veículos

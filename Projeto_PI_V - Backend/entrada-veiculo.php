@@ -7,26 +7,28 @@
     ?>
 </head>
 <?php
+$placa = @$_REQUEST['placa'];
 if (@$_REQUEST['botao'] == "Gravar") {
 
     $senha = md5(@$_POST['senha']);
     $estacionado = "sim";
     $veiculo_existente;
 
+
     //Verifica se já existe o registro no banco
-    $verifica_registro = "SELECT * FROM veiculos WHERE placa='{$_REQUEST['placa']}'";
+    $verifica_registro = "SELECT * FROM veiculos WHERE placa='{$_REQUEST['placa']}' AND estacionado='sim'";
     $result_verifica_registro = mysqli_query($con, $verifica_registro);
 
-
     if (mysqli_num_rows($result_verifica_registro) > 0) {
-        $veiculo_existente = "Este veículo já existe, tente outra opção!";
+        $veiculo_existente = "Erro: Este veículo está estacionado!";
         echo mysqli_error($con);
     } else {
         // insere no sistema se não existir registro igual
-        $insere = "INSERT into veiculos (placa, nome_veiculo, cor, tamanho, nome_categoria, estacionado) VALUES ('{$_POST['placa']}', '{$_POST['nome_veiculo']}', '{$_POST['selected_cor']}', '{$_POST['tamanho_veiculo']}', '{$_POST['selected_categoria']}', '$estacionado')";
+        $insere = "INSERT into veiculos (placa, nome_veiculo, tamanho, nome_categoria, estacionado) VALUES ('{$_POST['placa']}', '{$_POST['nome_veiculo']}', '{$_POST['tamanho_veiculo']}', '{$_POST['selected_categoria']}', '$estacionado')";
         $result_insere = mysqli_query($con, $insere);
-        "UPDATE configuracoes SET total_vagas_ocupadas = total_vagas_ocupadas  + 1 WHERE id='1'";
-        echo "<script>alert('Entrada efetuado com sucesso!');top.location.href='entrada-veiculo.php';</script>";
+        $insere = "UPDATE configuracoes SET total_vagas_ocupadas = total_vagas_ocupadas + 1";
+        $result_insere = mysqli_query($con, $insere);
+        echo "<script>alert('Entrada efetuado com sucesso!');window.open('imprimir.php?placa=$placa', '_blank');</script>";
     }
 }
 
@@ -55,27 +57,10 @@ if (@$_REQUEST['botao'] == "Excluir") {
         </tr>
         <tr>
             <td>Nome:</td>
-            <td colspan="2"><input type="text" name="nome_veiculo" required placeholder="Nome" value="<?php echo @$_POST['nome_veiculo']; ?>"></td>
+            <td colspan="2"><input type="text" name="nome_veiculo" maxlength="30" required placeholder="Nome" value="<?php echo @$_POST['nome_veiculo']; ?>"></td>
         </tr>
         <td>Placa:</td>
-        <td colspan="2"><input type="text" name="placa" maxlength="30" minlength="3" required placeholder="Placa" value="<?php echo @$_POST['placa']; ?>"></td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <select name="selected_cor">
-                    <option value="">Selecionar cor</option>
-                    <?php
-                    $result = "SELECT * FROM cores ORDER BY cor ASC";
-                    $result_verifica = mysqli_query($con, $result);
-                    while ($result_cores = mysqli_fetch_assoc($result_verifica)) { ?>
-                        <option value="<?php echo $result_cores['cor']; ?>">
-                            <?php echo $result_cores['cor']; ?>
-                        </option>
-                    <?php
-                    }
-                    ?>
-                </select>
-            </td>
+        <td colspan="2"><input type="text" name="placa" maxlength="10" minlength="3" required placeholder="Placa" value="<?php echo @$_POST['placa']; ?>"></td>
         </tr>
         <tr>
             <td>Tamanho:</td>
@@ -98,11 +83,11 @@ if (@$_REQUEST['botao'] == "Excluir") {
                 <select name="selected_categoria">
                     <option value="">Selecionar categoria</option>
                     <?php
-                    $result = "SELECT * FROM categorias ORDER BY nome_categoria ASC";
-                    $result_verifica = mysqli_query($con, $result);
-                    while ($result_cores = mysqli_fetch_assoc($result_verifica)) { ?>
-                        <option value="<?php echo $result_cores['nome_categoria']; ?>">
-                            <?php echo $result_cores['nome_categoria']; ?>
+                    $query = "SELECT * FROM categorias ORDER BY nome_categoria ASC";
+                    $result_query = mysqli_query($con, $query);
+                    while ($result = mysqli_fetch_assoc($result_query)) { ?>
+                        <option value="<?php echo $result['nome_categoria']; ?>">
+                            <?php echo $result['nome_categoria']; ?>
                         </option>
                     <?php
                     }
@@ -126,8 +111,6 @@ if (@$_REQUEST['botao'] == "Excluir") {
         </tr>
 </form>
 </table>
-
-<!-- ('{$_POST['placa']}', '{$_POST['nome_veiculo']}', '{$_POST['cor']}', '{$_POST['tamanho']}', '{$_POST['nome_categoria']}', '$estacionado')"; -->
 
 <!-- formulário excluir registro de veiculos que não estão mais estacionados -->
 <table width="20%" align="center">
