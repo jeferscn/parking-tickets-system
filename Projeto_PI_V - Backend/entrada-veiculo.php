@@ -58,10 +58,10 @@ if (@$_REQUEST['botao'] == "Excluir") {
         </tr>
         <tr>
             <td>Nome:</td>
-            <td colspan="2"><input type="text" name="nome_veiculo" maxlength="30" required placeholder="Nome" value="<?php echo @$_POST['nome_veiculo']; ?>"></td>
+            <td colspan="2"><input type="text" oninput="handleInput(event)" name="nome_veiculo" maxlength="30" required placeholder="Nome" value="<?php echo @$_POST['nome_veiculo']; ?>"></td>
         </tr>
         <td>Placa:</td>
-        <td colspan="2"><input type="text" id="InputUpper" name="placa" maxlength="10" minlength="3" required placeholder="Placa" value="<?php echo @$_POST['placa']; ?>"></td>
+        <td colspan="2"><input type="text" oninput="handleInput(event)" name="placa" maxlength="10" minlength="3" required placeholder="Placa" value="<?php echo @$_POST['placa']; ?>"></td>
         </tr>
         <tr>
             <td>Tamanho:</td>
@@ -147,8 +147,13 @@ if (@$_REQUEST['botao'] == "Excluir") {
 </table>
 </form>
 
-<style>
-    #InputUpper {
-        text-transform: uppercase
-    }
-</style>
+<script>
+    function handleInput(e) {
+   var ss = e.target.selectionStart;
+   var se = e.target.selectionEnd;
+   e.target.value = e.target.value.toUpperCase();
+   e.target.selectionStart = ss;
+   e.target.selectionEnd = se;
+}
+    
+</script>

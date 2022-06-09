@@ -18,22 +18,22 @@ else if (!empty($id_veiculo)) $result_vagas = "SELECT * FROM veiculos WHERE id_v
 $result_verifica_vagas = mysqli_query($con, $result_vagas);
 while ($result_vagas = mysqli_fetch_assoc($result_verifica_vagas)) {
     $ticket = "Ticket: #" . fzerosnafrente($result_vagas['id_veiculo'], 7) . "<br>";
-    $veiculo = "Veículo:<br>" . $result_vagas['nome_veiculo'] . "<br>";
-    $placa = "Placa: " . $result_vagas['placa'] . "<br>";
+    $veiculo = "Veículo:<br>" . strtoupper($result_vagas['nome_veiculo']) . "<br>";
+    $placa = "Placa: " . strtoupper($result_vagas['placa']) . "<br>";
     $tamanho = $result_vagas['tamanho'];
-    $tamanho_formatado = "Tamanho:<br>" . $result_vagas['tamanho'];
+    $tamanho_formatado = "Tamanho:<br>" . strtoupper($result_vagas['tamanho']);
     $categoria = "Categoria:<br>" . $result_vagas['nome_categoria'] . "<br>";
     $data_entrada = new DateTime($result_vagas['data_entrada']);
-    $data_entrada_formatado = "Entrada:<br>" . $data_entrada->format('d-m-Y H:i:s') . "<br>";
+    $data_entrada_formatado = "Entrada:<br>" . $data_entrada->format('H:i:s - d/m/Y') . "<br>";
     $data_saida = new DateTime($result_vagas['data_saida']);
-    $data_saida_formatado = "Saída:<br>" . $data_saida->format('d-m-Y H:i:s') . "<br>";
+    $data_saida_formatado = "Saída:<br>" . $data_saida->format('H:i:s - d/m/Y') . "<br>";
 }
 
 $query = "SELECT * FROM configuracoes WHERE id='1'";
 $execute = mysqli_query($con, $query);
 while ($query = mysqli_fetch_assoc($execute)) {
     $nome_estacionamento = $query['nome_estacionamento'];
-    $telefone = "Fone: " . $query['telefone'] . "<br>";
+    $telefone = $query['telefone'] . "<br>";
     $endereco =  $query['endereco'] . "<br>";
     $valor_pequeno = $query['valor_pequeno'] . "<br>";
     $valor_medio = $query['valor_medio'] . "<br>";
@@ -56,56 +56,69 @@ while ($query = mysqli_fetch_assoc($execute)) {
 $query = "SELECT valor FROM pagamentos WHERE id_pagamento='$id_pagamento'";
 $execute = mysqli_query($con, $query);
 while ($query = mysqli_fetch_assoc($execute)) {
-    $total_a_pagar = "Total a pagar: R$" . str_replace(".", ",", $query['valor']);
+    $total_a_pagar = "TOTAL A PAGAR: <br>R$" . str_replace(".", ",", $query['valor']);
 }
 
 // Mostra os dados que serão impressos no ticket
 if (!empty($id_veiculo) && $saida == "sim") {
     // Impressão de saída
     echo "
-        <table class='impressao' align='left' width='400px'>
-            <tr>
-                <td colspan='5' align='left'><b</td>
-            </tr>
-            <tr>
-                <td class='borda' colspan='2' align='center'>" . $nome_estacionamento . "</td>
-                <td class='borda' colspan='2' align='center'>" . $telefone . "</td>
-            </tr>
-            <tr>
-                <td class='borda' colspan='5' align='center'>" . $endereco . "</td>
-            </tr>
-                <td colspan='5' align='left'></td>
-            <tr>
-                <td class='borda' colspan='5' align='center'>" . $ticket . "</td>
-            </tr>
-            <tr>
-                <td class='borda' colspan='2' align='center'>" . $veiculo . "</td>
-                <td class='borda' colspan='3' align='center'>" . $categoria . "</td>
-            </tr>
-            <tr>
-                <td class='borda' colspan='5' align='center'>" . $placa . "</td>
-            </tr>
-            <tr>
-                <td class='borda' colspan='2' align='center'>" . $tamanho_formatado . "</td>
-                <td class='borda' colspan='2' align='center'>" . $valor_hora . "</td>
-            </tr>
-            <tr>
-                <td class='borda' colspan='2' align='center'>" . $data_entrada_formatado . "</td>
-                <td class='borda' colspan='2' align='center'>" . $data_saida_formatado . "</td>
-            </tr>
-            <tr>
-                <td class='borda' colspan='5' align='center'>" . $total_a_pagar . "</td>
-            </tr>
+    <table class='impressao' align='center' width='500px'>
+        <tr>
+            <td colspan='6' align='center'></td>
+        </tr>
+        <tr>
+            <td class='font-destaque-logo' colspan='3' align='center'>" . $nome_estacionamento . "</td>
+            <td class='font-destaque' colspan='3' align='center'>" . $telefone . "</td>
+        </tr>
+        <tr  class='font-destaque'>
+            <td colspan='6' align='center'>" . $endereco . "</td>
+        </tr>
+        <tr>
+            <td class='borda' colspan='6' align='center'></td>
+        </tr>
+        <tr>
+            <td class='borda' colspan='6' align='center'>" . $ticket . "</td>
+        </tr>
+        <tr>
+            <td class='borda' colspan='3' align='center'>" . $veiculo . "</td>
+            <td class='borda' colspan='3' align='center'>" . $categoria . "</td>
+        </tr>
+        <tr>
+            <td class='borda' colspan='6' align='center'>" . $placa . "</td>
+        </tr>
+        <tr>
+            <td class='borda' colspan='3' align='center'>" . $tamanho_formatado . "</td>
+            <td class='borda' colspan='3' align='center'>" . $valor_hora . "</td>
+        </tr>
+        <tr>
+            <td class='borda' colspan='3' align='center'>" . $data_entrada_formatado . "</td>
+            <td class='borda' colspan='3' align='center'>" . $data_saida_formatado . "</td>
+        </tr>
+        <tr>
+            <td class='font-destaque' colspan='6' align='center'>" . $total_a_pagar . "</td>
+        </tr>
         </table>
         <style>
+        .impressao{
+            font-family:arial;
+            font-weight:bold;
+            font-size:1.2rem;
+            border:1px solid;
+            border-radius:10px;
+        }
         .impressao tr td {
-            padding: 5px 15px;
+            padding: 10px 5px;
+            width:50%;
         }
         .borda {
-            border:1px solid;
+            border-bottom:1px solid;
         }
-        .height{
-            50px;
+        .font-destaque{
+            font-size:1.5rem;
+        }
+        .font-destaque-logo{
+            font-size:1.8rem;
         }
         </style>
     
@@ -113,43 +126,66 @@ if (!empty($id_veiculo) && $saida == "sim") {
 } else if (!empty($placa)) {
     // Impressão de entrada
     echo "
-    <table class='impressao' align='left' width='400px' border='1'>
-        </tr>
-            <td colspan='5' align='left'><b</td>
+    <table class='impressao' align='center' width='500px'>
         <tr>
-        <tr>
-            <td colspan='2' align='center'>" . $nome_estacionamento . "</td>
-            <td colspan='2' align='center'>" . $telefone . "</td>
+            <td colspan='6' align='center'></td>
         </tr>
         <tr>
-            <td colspan='5' align='center'>" . $endereco . "</td>
+            <td class='font-destaque-logo' colspan='3' align='center'>" . $nome_estacionamento . "</td>
+            <td class='font-destaque' colspan='3' align='center'>" . $telefone . "</td>
         </tr>
-            <td colspan='5' align='left'></td>
-        <tr>
-            <td colspan='5' align='center'>" . $ticket . "</td>
-        </tr>
-        <tr>
-            <td colspan='2' align='center'>" . $veiculo . "</td>
-            <td colspan='3' align='center'>" . $categoria . "</td>
+        <tr  class='font-destaque'>
+            <td colspan='6' align='center'>" . $endereco . "</td>
         </tr>
         <tr>
-            <td colspan='5' align='center'>" . $placa . "</td>
+            <td class='borda' colspan='6' align='center'></td>
         </tr>
         <tr>
-        <td colspan='2' align='center'>" . $tamanho_formatado . "</td>
-            <td colspan='2' align='center'>" . $valor_hora . "</td>
+            <td class='borda' colspan='6' align='center'>" . $ticket . "</td>
         </tr>
         <tr>
-            <td colspan='2' align='center'>" . $data_entrada_formatado . "</td>
+            <td class='borda' colspan='3' align='center'>" . $veiculo . "</td>
+            <td class='borda' colspan='3' align='center'>" . $categoria . "</td>
         </tr>
-    </table>
-    <style>
-    .impressao tr td {
-        padding: 5px 15px;
-    }
-    </style>
-
-";
+        <tr>
+            <td class='borda' colspan='6' align='center'>" . $placa . "</td>
+        </tr>
+        <tr>
+            <td class='borda' colspan='3' align='center'>" . $tamanho_formatado . "</td>
+            <td class='borda' colspan='3' align='center'>" . $valor_hora . "</td>
+        </tr>
+        <tr>
+            <td class='borda' colspan='3' align='center'>" . $data_entrada_formatado . "</td>
+            <td class='borda' colspan='3' align='center'>Saída: <br>-</td>
+        </tr>
+        <tr>
+            <td class='font-destaque' colspan='6' align='center'>TOTAL A PAGAR: <br>-</td>
+        </tr>
+        </table>
+        <style>
+        .impressao{
+            font-family:arial;
+            font-weight:bold;
+            font-size:1.2rem;
+            border:1px solid;
+            border-radius:10px;
+        }
+        .impressao tr td {
+            padding: 10px 5px;
+            width:50%;
+        }
+        .borda {
+            border-bottom:1px solid;
+        }
+        .font-destaque{
+            font-size:1.5rem;
+        }
+        .font-destaque-logo{
+            font-size:1.8rem;
+        }
+        </style>
+    
+    ";
 }
 
 // Completa o numero informado com zeros até chegar ao tamanho escolhido
