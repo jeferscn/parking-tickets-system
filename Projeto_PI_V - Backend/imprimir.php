@@ -41,9 +41,9 @@ while ($query = mysqli_fetch_assoc($execute)) {
 }
 
 //Checa o tamanho e atribui o valor de cada tamanho.
-if ($tamanho == "pequeno") $valor_hora = "Valor da hora:<br>R$ " . str_replace(".", ",", $valor_pequeno);
-elseif ($tamanho == "medio") $valor_hora = "Valor da hora:<br>R$ " . str_replace(".", ",", $valor_medio);
-elseif ($tamanho == "grande") $valor_hora = "Valor da hora:<br>R$ " . str_replace(".", ",", $valor_grande);
+if ($tamanho == "pequeno") $valor_hora = "Valor hora:<br>R$ " . str_replace(".", ",", $valor_pequeno);
+elseif ($tamanho == "medio") $valor_hora = "Valor hora:<br>R$ " . str_replace(".", ",", $valor_medio);
+elseif ($tamanho == "grande") $valor_hora = "Valor hora:<br>R$ " . str_replace(".", ",", $valor_grande);
 
 //retorna o último ID caso o mesmo veículo possua outros registros
 $query = "SELECT MAX(id_pagamento) as id_pagamento FROM pagamentos WHERE id_veiculo='$id_veiculo'";

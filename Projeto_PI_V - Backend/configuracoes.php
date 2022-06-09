@@ -16,6 +16,7 @@
         $valor_pequeno = $query['valor_pequeno'];
         $valor_medio = $query['valor_medio'];
         $valor_grande = $query['valor_grande'];
+        $tempo_isencao = $query['tempo_isencao'];
         $nome_estacionamento = $query['nome_estacionamento'];
         $mensagem = $query['mensagem'];
         $endereco = $query['endereco'];
@@ -29,6 +30,7 @@
                 valor_pequeno = '{$_POST['valor_pequeno']}',
                 valor_medio = '{$_POST['valor_medio']}',
                 valor_grande = '{$_POST['valor_grande']}',
+                tempo_isencao = '{$_POST['tempo_isencao']}',
                 nome_estacionamento = '{$_POST['nome_estacionamento']}',
                 mensagem = '{$_POST['mensagem']}',
                 endereco = '{$_POST['endereco']}',
@@ -72,6 +74,12 @@
                 <td align="right">Valor veículo grande:</td>
                 <td colspan="3">
                     <input type="text" size="30" name="valor_grande" onKeyUp="mascaraMoeda(this, event)" required placeholder="Ex.: 5,50" value="<?php echo str_replace(".", ",", @$valor_grande); ?>">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Tempo de tolerância em minutos:</td>
+                <td colspan="3">
+                    <input type="number" size="30" name="tempo_isencao" required placeholder="Ex.: 15" value="<?php echo @$tempo_isencao; ?>">
                 </td>
             </tr>
             <tr>
