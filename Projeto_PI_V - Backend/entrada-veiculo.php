@@ -7,7 +7,7 @@
     ?>
 </head>
 <?php
-$placa = @$_REQUEST['placa'];
+$placa = strtoupper(@$_REQUEST['placa']);
 if (@$_REQUEST['botao'] == "Gravar") {
 
     $senha = md5(@$_POST['senha']);
@@ -28,7 +28,8 @@ if (@$_REQUEST['botao'] == "Gravar") {
         $result_insere = mysqli_query($con, $insere);
         $insere = "UPDATE configuracoes SET total_vagas_ocupadas = total_vagas_ocupadas + 1";
         $result_insere = mysqli_query($con, $insere);
-        echo "<script>alert('Entrada efetuado com sucesso!');window.open('imprimir.php?placa=$placa', '_blank');</script>";
+        echo "<script>window.open('imprimir.php?placa=$placa', '_blank');</script>";
+        echo "<script>alert('Entrada efetuado com sucesso!');top.location.href='entrada-veiculo.php';</script>";
     }
 }
 
@@ -60,7 +61,7 @@ if (@$_REQUEST['botao'] == "Excluir") {
             <td colspan="2"><input type="text" name="nome_veiculo" maxlength="30" required placeholder="Nome" value="<?php echo @$_POST['nome_veiculo']; ?>"></td>
         </tr>
         <td>Placa:</td>
-        <td colspan="2"><input type="text" name="placa" maxlength="10" minlength="3" required placeholder="Placa" value="<?php echo @$_POST['placa']; ?>"></td>
+        <td colspan="2"><input type="text" id="InputUpper" name="placa" maxlength="10" minlength="3" required placeholder="Placa" value="<?php echo @$_POST['placa']; ?>"></td>
         </tr>
         <tr>
             <td>Tamanho:</td>
@@ -145,3 +146,9 @@ if (@$_REQUEST['botao'] == "Excluir") {
         </tr>
 </table>
 </form>
+
+<style>
+    #InputUpper {
+        text-transform: uppercase
+    }
+</style>

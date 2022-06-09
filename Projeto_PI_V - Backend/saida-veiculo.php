@@ -43,16 +43,11 @@
                 </tr>
                 <?php
                 // Logica Filtros
-                $query = "SELECT * FROM veiculos WHERE estacionado='sim'";
-
                 // Filtro por nome
+                $query = "SELECT * FROM veiculos WHERE estacionado='sim'";
                 @$placa = $_POST['placa'];
-                if (true) {
-                    $query .= ($placa ? " AND placa LIKE '%$placa%' " : "");
-                }
-
+                if (true) $query .= ($placa ? " AND placa LIKE '%$placa%' " : "");
                 $result = mysqli_query($con, $query);
-
                 while ($coluna = mysqli_fetch_array($result)) {
                 ?>
                     <tr>
@@ -64,7 +59,7 @@
                         <td width="10%" align="center"><?php $data_entrada = new DateTime($coluna['data_entrada']);
                                                         echo $data_entrada->format('d-m-Y H:i:s') . "<br>"; ?></td>
                         <td width="10%">
-                            <a class="cor-link" href="saida-veiculo.php?veiculo=<?php echo @$coluna['id_veiculo']; ?>">
+                            <a class="cor-link" href="saida-veiculo.php?placa=<?php echo @$coluna['placa']; ?>&veiculo=<?php echo @$coluna['id_veiculo']; ?>">
                                 <input type="button" value="Saída" />
                             </a>
                         </td>
@@ -90,6 +85,7 @@
                         <?php
                         // Logica Filtros
                         $veiculo = @$_GET['veiculo'];
+                        $placa = @$_REQUEST['placa'];
                         $query = "SELECT * FROM veiculos WHERE estacionado='sim' AND id_veiculo='$veiculo'";
 
                         // Filtro por nome
@@ -148,7 +144,7 @@
                             $query = "INSERT INTO pagamentos (valor, tipo_pagamento, id_veiculo, placa) VALUES ('$valor_total_a_pagar', '{$_POST['selected_tipo_pagamento']}', '$id_veiculo', '$placa')";
                             mysqli_query($con, $query);
 
-                            echo "<script>alert('Finalização realizada com sucesso!');top.location.href='imprimir.php?veiculo=".$id_veiculo."&saida=sim';</script>";
+                            echo "<script>alert('Finalização realizada com sucesso!');top.location.href='imprimir.php?placa=&veiculo=".$id_veiculo."&saida=sim';</script>";
                         }
                         ?>
                         <tr>
