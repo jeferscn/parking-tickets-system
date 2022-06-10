@@ -26,7 +26,7 @@ CREATE TABLE `categorias` (
   `id_categoria` int(4) NOT NULL AUTO_INCREMENT,
   `nome_categoria` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_categoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +35,7 @@ CREATE TABLE `categorias` (
 
 LOCK TABLES `categorias` WRITE;
 /*!40000 ALTER TABLE `categorias` DISABLE KEYS */;
-INSERT INTO `categorias` VALUES (4,'Automóvel'),(5,'Motocicleta'),(6,'Caminhão'),(7,'Caminhonete'),(8,'Bicicleta');
+INSERT INTO `categorias` VALUES (4,'Automóvel'),(6,'Caminhão'),(7,'Caminhonete'),(8,'Bicicleta'),(9,'Motocicleta');
 /*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -68,7 +68,7 @@ CREATE TABLE `configuracoes` (
 
 LOCK TABLES `configuracoes` WRITE;
 /*!40000 ALTER TABLE `configuracoes` DISABLE KEYS */;
-INSERT INTO `configuracoes` VALUES (1,55,20,4.00,5.00,5.00,15,'UNICURITIBA Parking','Rua XV de Novembro, 1230 - Curitiba/PR','Obrigado por confiar em nossos serviços!','(41) 99999-9999');
+INSERT INTO `configuracoes` VALUES (1,55,20,4.00,5.00,6.00,15,'UNICURITIBA Parking','Rua XV de Novembro, 1230 - Curitiba/PR','Obrigado por confiar em nossos serviços!','(41) 99999-5555');
 /*!40000 ALTER TABLE `configuracoes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -132,7 +132,7 @@ CREATE TABLE `pagamentos` (
   `id_veiculo` int(10) DEFAULT NULL,
   `placa` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id_pagamento`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -141,7 +141,7 @@ CREATE TABLE `pagamentos` (
 
 LOCK TABLES `pagamentos` WRITE;
 /*!40000 ALTER TABLE `pagamentos` DISABLE KEYS */;
-INSERT INTO `pagamentos` VALUES (1,0.00,'Dinheiro',4,'2133213213'),(2,0.00,'Pix - A vista',5,'213321321'),(3,0.00,'Cartão Crédito',6,'21332132'),(4,0.00,'Cartão Crédito',7,'AER4556'),(5,0.00,'Cartão Crédito',9,'WETWEWT'),(6,0.00,'Cartão Crédito',8,'DADADSAS'),(7,0.00,'Cartão Crédito',10,'WETWEWTR'),(8,0.00,'Cartão Crédito',1,'AEB55448'),(9,0.00,'Cartão Crédito',1,'AEB55448'),(10,0.00,'Cartão Crédito',1,''),(11,0.00,'Cartão Crédito',2,''),(12,0.00,'Cartão Crédito',3,'AEF250AAV'),(13,0.00,'Cartão Crédito',3,'AEF250AAV'),(14,0.00,'Cartão Crédito',3,'AEF250AAV'),(15,0.00,'Cartão Crédito',3,'AEF250AAV'),(16,0.00,'Cartão Crédito',3,'AEF250AAV'),(17,0.00,'Cartão Crédito',3,'AEF250AAV'),(18,0.00,'Cartão Crédito',4,'2133213213'),(19,0.00,'Cartão Crédito',5,'213321321'),(20,0.00,'Cartão Crédito',5,'213321321'),(21,0.00,'Cartão Crédito',5,'213321321'),(22,0.00,'Cartão Crédito',5,'213321321'),(23,0.00,'Cartão Crédito',6,'21332132'),(24,0.00,'Cartão Crédito',6,'21332132'),(25,0.00,'Cartão Crédito',6,'21332132'),(26,0.00,'Cartão Crédito',6,'21332132'),(27,57.13,'Cartão Crédito',6,'21332132'),(28,70.42,'Dinheiro',7,'AER4556'),(29,1.17,'Cartão Crédito',11,'GOL3030'),(30,1.17,'Cartão Crédito',12,'GOL3031'),(31,0.00,'Cartão Crédito',15,'FUSCA30'),(32,2.08,'Cartão Crédito',14,'GOL3035');
+INSERT INTO `pagamentos` VALUES (1,0.00,'Dinheiro',4,'2133213213'),(2,0.00,'Pix - A vista',5,'213321321'),(3,0.00,'Cartão Crédito',6,'21332132'),(4,0.00,'Cartão Crédito',7,'AER4556'),(5,0.00,'Cartão Crédito',9,'WETWEWT'),(6,0.00,'Cartão Crédito',8,'DADADSAS'),(7,0.00,'Cartão Crédito',10,'WETWEWTR'),(8,0.00,'Cartão Crédito',1,'AEB55448'),(9,0.00,'Cartão Crédito',1,'AEB55448'),(10,0.00,'Cartão Crédito',1,''),(11,0.00,'Cartão Crédito',2,''),(12,0.00,'Cartão Crédito',3,'AEF250AAV'),(13,0.00,'Cartão Crédito',3,'AEF250AAV'),(14,0.00,'Cartão Crédito',3,'AEF250AAV'),(15,0.00,'Cartão Crédito',3,'AEF250AAV'),(16,0.00,'Cartão Crédito',3,'AEF250AAV'),(17,0.00,'Cartão Crédito',3,'AEF250AAV'),(18,0.00,'Cartão Crédito',4,'2133213213'),(19,0.00,'Cartão Crédito',5,'213321321'),(20,0.00,'Cartão Crédito',5,'213321321'),(21,0.00,'Cartão Crédito',5,'213321321'),(22,0.00,'Cartão Crédito',5,'213321321'),(23,0.00,'Cartão Crédito',6,'21332132'),(24,0.00,'Cartão Crédito',6,'21332132'),(25,0.00,'Cartão Crédito',6,'21332132'),(26,0.00,'Cartão Crédito',6,'21332132'),(27,57.13,'Cartão Crédito',6,'21332132'),(28,70.42,'Dinheiro',7,'AER4556'),(29,1.17,'Cartão Crédito',11,'GOL3030'),(30,1.17,'Cartão Crédito',12,'GOL3031'),(31,0.00,'Cartão Crédito',15,'FUSCA30'),(32,2.08,'Cartão Crédito',14,'GOL3035'),(33,0.00,'Dinheiro',18,'FUSCA2022');
 /*!40000 ALTER TABLE `pagamentos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -190,7 +190,7 @@ CREATE TABLE `veiculos` (
   `data_entrada` timestamp NOT NULL DEFAULT current_timestamp(),
   `data_saida` datetime DEFAULT NULL,
   PRIMARY KEY (`id_veiculo`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -199,7 +199,7 @@ CREATE TABLE `veiculos` (
 
 LOCK TABLES `veiculos` WRITE;
 /*!40000 ALTER TABLE `veiculos` DISABLE KEYS */;
-INSERT INTO `veiculos` VALUES (17,'GOL2022','GOL2022',NULL,'medio','Automóvel','sim','2022-06-10 23:12:13',NULL);
+INSERT INTO `veiculos` VALUES (17,'GOL2022','GOL2022',NULL,'medio','Automóvel','sim','2022-06-10 23:12:13',NULL),(18,'FUSCA2022','FUSCA',NULL,'medio','Automóvel','nao','2022-06-10 23:32:36','2022-06-10 20:34:05');
 /*!40000 ALTER TABLE `veiculos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -212,4 +212,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-10 20:20:20
+-- Dump completed on 2022-06-10 20:45:22

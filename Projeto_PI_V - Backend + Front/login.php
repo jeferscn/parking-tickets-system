@@ -12,10 +12,10 @@
 
 <?php
 if (@$_REQUEST['botao'] == "Entrar") {
-    $email = $_POST['email'];
+    $login = @$_POST['login'];
     $senha = md5($_POST['senha']);
 
-    $query = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha' ";
+    $query = "SELECT * FROM usuarios WHERE nome_usuario = '$login' AND senha = '$senha' ";
     $result = mysqli_query($con, $query);
     while ($coluna = mysqli_fetch_array($result)) {
         $_SESSION["id_usuario"] = $coluna["id_usuario"];
@@ -42,7 +42,7 @@ if (@$_REQUEST['botao'] == "Entrar") {
 <body>
 <div class="bg-image">
     <div id="login">
-        <form class="card" action="#" method="post" name="usuario">
+        <form class="card" action="" method="post" name="usuario">
             <div class="card-content">
                 <div class="card-content-area">
                     <table  align="center">
@@ -52,7 +52,7 @@ if (@$_REQUEST['botao'] == "Entrar") {
                             <div class="card-content-area">
                                 <tr>
                                     <td class="email">Usuário:</td>
-                                    <td colspan="2"><input type="text" name="email" required placeholder="Usuário" value="<?php echo @$_POST['email']; ?>"></td>
+                                    <td colspan="2"><input type="text" name="login" required placeholder="Login" value="<?php echo @$_POST['login']; ?>"></td>
                                 </tr>
                                 <tr>
                                     <td class="senha">Senha:</td>
