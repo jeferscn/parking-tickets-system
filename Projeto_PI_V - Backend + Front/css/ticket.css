@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(231, 241, 248);
+}
+
+img {
+    width: 170px;
+    height: 60px;    
+}
+
+/* --------------------------------------------------- MAIN ---------------------------------------------------*/
+
+main {
+    margin: 0 auto 0 250px;
+    padding-top: 60px;
+}
+
+h4 {
+    font-size: 50px;
+    margin: 20px;
+    color: rgb(39, 39, 54);
+}
+
+.titulo {
+    width: 20vw;
+    height: 11vh;
+}
+
+.container-tickets {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 85vw;
+    height: 32vh;
+    padding: 20px 0px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgb(39, 39, 54);
+    box-shadow: 1px 1px 25px 1px #525252;
+}
+
+.ticket {
+    width: 25vw;
+    height: 30vh;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+/* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
+
+@media(max-width: 860px) {.sidebar{
+        height: auto;
+        width: 70px;
+        left: 0;
+        margin: 100px 0;
+    }
+
+    header, #btn, #cancel {
+        display: none;
+    }
+
+    span {
+        position: absolute;
+        margin-left: 23px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sidebar a {
+        height: 60px;
+    }
+
+    .sidebar a i {
+        margin-left: -10px;
+    }
+
+    a:hover {
+        width: 200px;
+        background: inherit;
+    }
+
+    .sidebar a:hover span {
+        opacity: 1;
+        visibility: visible;
+    } 
+}  

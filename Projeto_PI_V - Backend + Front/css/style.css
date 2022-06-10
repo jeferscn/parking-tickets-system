@@ -1,0 +1,71 @@
+body {
+  background-image: linear-gradient(-135deg, #0A40F9, #14D9BE);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#login {
+  height: 410px;
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: black;
+  margin: 150px auto 0 700px;
+  border-radius: 5%;
+  box-shadow: 10px 1px 25px 1px rgb(46, 46, 46);
+  position: absolute;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 90px;
+  color: #fff;
+}
+
+.label {
+  margin-left: 30px;
+  padding: 5px;
+  color: #fff;
+}
+
+.div-inputs {
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+input {
+  margin-top: 25px;
+  padding: 0 5px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+  color: #fff;
+}
+
+button {
+  background-color: #148AD9;
+  border: none;
+  padding: 15px;
+  width: 40%;
+  margin: 20px 0 0 150px;
+  border-radius: 10px;
+  color: white;
+}
+
+button:hover {
+  background-color: #09DBD8;
+  transition: 0.5s;
+}
+
+#logo {
+  height: 159px;
+  width: 300px;
+  position: absolute;
+  margin: 650px 0 0 800px;
+  background-image: url(/img/mind.png)
+}
+
+#linha {
+  color: rgba(255, 255, 255, 0.9);
+  width: 1800px;
+  margin-top: 30px;
+}

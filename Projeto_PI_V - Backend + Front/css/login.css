@@ -1,0 +1,120 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.bg-image {
+    background-image: url('../img/carro-login.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+#login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 10px;
+    width: 20vw;
+    height: 40vh;
+    box-shadow: 10px 1px 25px 1px #525252;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 50px;
+    opacity: 0.8;
+    color: #59E38B;
+}
+
+.card-header::after {
+    content: "";
+    width: 70px;
+    height: 1px;
+    color: #59E38B;
+    display: block;
+    margin-top: -17px;
+    margin-left: -5px;
+}
+
+.card-content-area .email .senha {
+   
+    color: #59E38B;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+
+.card-content-area {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.card-content-area input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 0 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    color: #59E38B;
+}
+
+
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer .submit {
+    width: 20vw;
+    height: 40px;
+    border: none;
+    background-color: #59E38B;
+    color: #000000;
+    margin: 10px 0;
+}
+
+.card-footer a {
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.8;
+    color: #59E38B;
+    text-decoration: none;
+}
+
+.card-footer:hover 
+.submit:hover {
+    transition: 0.5s;
+    background: #51F0E5;
+    border: none;
+}
+@media screen and (max-width: 1100px) {
+
+  
+   
+  }

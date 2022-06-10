@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(231, 241, 248);
+}
+
+/* --------------------------------------------------- MAIN ---------------------------------------------------*/
+
+main {
+    margin: 0 auto 0 30px;
+    padding-top: 70px;
+}
+
+h4 {
+    font-size: 2.2em;
+    margin: 20px 0 0 250px;
+    color: rgb(39, 39, 54);
+}
+
+.titulo {
+    width: 20vw;
+    height: 11vh;
+}
+
+.container-dados-vagas {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 85vw;
+    width: auto;
+    height: 32vh;
+    height: auto;
+    padding: 20px 0px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgb(39, 39, 54);
+    box-shadow: 1px 1px 25px 1px #525252;
+}
+
+.container-dados-vagas-02 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 85vw;
+    height: 32vh;
+    padding: 20px 0px;
+    margin: 80px auto 30px auto;
+    border-radius: 10px;
+    background-color: rgb(39, 39, 54);
+    box-shadow: 1px 1px 25px 1px #525252;
+}
+
+.dados-vagas {
+    width: 25vw;
+    height: 30vh;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.dashboard {
+    width: 82vw;
+    height: 30vh;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+/* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
+
+@media(max-width: 1600px) {.container-dados-vagas {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 1290px;
+        height: 1000px;
+        padding: 20px 0px;
+        margin-left: 270px;
+        border-radius: 10px;
+        background-color: rgb(39, 39, 54);
+        box-shadow: 1px 1px 25px 1px #525252;
+    }
+
+    .container-dados-vagas-02 {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 1290px;
+        height: 290px;
+        padding: 20px 0px;
+        margin-top: 50px;
+        margin-left: 270px;
+        margin-bottom: 40px;
+        border-radius: 10px;
+        background-color: rgb(39, 39, 54);
+        box-shadow: 1px 1px 25px 1px #525252;
+    }
+
+    .dados-vagas {
+        width: 500px;
+        height: 300px;
+        margin: auto;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+
+    .dashboard {
+        width: 1150px;
+        height: 180px;
+        margin: auto;
+        padding: 50px;
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+} 
+
+@media(max-width: 1440px) {.container-dados-vagas {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 1000px;
+        height: 600px;
+        padding: 20px 0px;
+        margin-left: 270px;
+        border-radius: 10px;
+        background-color: rgb(39, 39, 54);
+        box-shadow: 1px 1px 25px 1px #525252;
+    }
+
+    .container-dados-vagas-02 {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 1000;
+        height: 300px;
+        padding: 20px 0px;
+        margin-top: 80px;
+        margin-left: 270px;
+        border-radius: 10px;
+        background-color: rgb(39, 39, 54);
+        box-shadow: 1px 1px 25px 1px #525252;
+    }
+
+    .dados-vagas {
+        width: 300px;
+        height: 200px;
+        margin: auto;
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+
+    .dashboard {
+        width: 600px;
+        height: 200px;
+        margin: auto;
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+}
+
+@media(max-width: 1024px) {.container-dados-vagas {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 900;
+        height: 1000px;
+        padding: 20px 0px;
+        margin-left: 270px;
+        border-radius: 10px;
+        background-color: rgb(39, 39, 54);
+        box-shadow: 1px 1px 25px 1px #525252;
+    }
+
+    .container-dados-vagas-02 {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 900px;
+        height: 1000px;
+        padding: 20px 0px;
+        margin-top: 80px;
+        margin-left: 270px;
+        border-radius: 10px;
+        background-color: rgb(39, 39, 54);
+        box-shadow: 1px 1px 25px 1px #525252;
+    }
+
+    .dados-vagas {
+        width: 300px;
+        height: 200px;
+        margin: auto;
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+
+    .dashboard {
+        width: 600px;
+        height: 200px;
+        margin: auto;
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+} 
+
+@media(max-width: 860px) {.sidebar{
+        height: auto;
+        width: 70px;
+        left: 0;
+        margin: 100px 0;
+    }
+
+    header, #btn, #cancel {
+        display: none;
+    }
+
+    span {
+        position: absolute;
+        margin-left: 23px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sidebar a {
+        height: 60px;
+    }
+
+    .sidebar a i {
+        margin-left: -10px;
+    }
+
+    a:hover {
+        width: 200px;
+        background: inherit;
+    }
+
+    .sidebar a:hover span {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .container-dados-vagas {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 1000px;
+        height: 700px;
+        padding: 20px 0px;
+        margin-left: 100px;
+        border-radius: 10px;
+        background-color: rgb(39, 39, 54);
+        box-shadow: 1px 1px 25px 1px #525252;
+    }
+
+    .container-dados-vagas-02 {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 1000;
+        height: 300px;
+        padding: 20px 0px;
+        margin-top: 80px;
+        margin-left: 100px;
+        border-radius: 10px;
+        background-color: rgb(39, 39, 54);
+        box-shadow: 1px 1px 25px 1px #525252;
+    }
+
+    .dados-vagas {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+
+    .dashboard {
+        width: 600px;
+        height: 200px;
+        padding: 40px;
+        margin: auto;
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+}  

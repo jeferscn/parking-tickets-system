@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(231, 241, 248);
+}
+
+img {
+    width: 170px;
+    height: 60px;    
+}
+
+/* --------------------------------------------------- MAIN ---------------------------------------------------*/
+
+main {
+    margin: 0 auto 0 250px;
+    padding-top: 60px;
+}
+
+
+input {
+    font-size: 20px;
+    outline: none;
+    border: 1px solid #707070;
+    border-radius: 5px;
+}
+
+select {
+    appearance: none;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    z-index: 1;
+    outline: none;
+}
+
+label {
+    color: #ffffff;
+}
+
+button {
+    background-color: #59E38B;
+    color: #000000;
+    padding: 10px 50px;
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover {
+    background-color: #51F0E5;
+    transition: 0.5s;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-left: 30px;
+    color: rgb(39, 39, 54);
+}
+
+.titulo {
+    width: 25vw;
+    height: 11vh;
+}
+
+.container-dados-vagas {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 79vw;
+    height: 30vh;
+    padding: 20px 0px 150px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgb(39, 39, 54);
+    box-shadow: 1px 1px 25px 1px #525252;
+}
+
+.container-select-tamanho {
+    width: 50vw;
+    height: 20vh;
+    margin: 70px auto 0 auto;
+}
+
+.dados-vagas {
+    display: flex;
+    margin: auto;
+    width: 50vw;
+    height: 4vh;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.select-categoria {
+    display: flex;
+    margin: auto;
+    width: 15vw;
+    height: 0vh;
+    margin: 40px 0 0 0;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.container-tamanho {
+    color: #ffffff;
+    width: 20vw;
+    margin: 0 auto 50px 350px;
+}
+
+.container-botoes {
+    width: 20vw;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    float: right;
+}
+
+/* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
+
+@media(max-width: 860px) {.sidebar{
+        height: auto;
+        width: 70px;
+        left: 0;
+        margin: 100px 0;
+    }
+
+    header, #btn, #cancel {
+        display: none;
+    }
+
+    span {
+        position: absolute;
+        margin-left: 23px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sidebar a {
+        height: 60px;
+    }
+
+    .sidebar a i {
+        margin-left: -10px;
+    }
+
+    a:hover {
+        width: 200px;
+        background: inherit;
+    }
+
+    .sidebar a:hover span {
+        opacity: 1;
+        visibility: visible;
+    } 
+}  
