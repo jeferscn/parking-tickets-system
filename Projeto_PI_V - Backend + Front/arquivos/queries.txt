@@ -1,0 +1,54 @@
+CREATE DATABASE estacionamento;
+
+USE estacionamento;
+
+CREATE TABLE usuarios (
+id_usuario int(4)AUTO_INCREMENT, nome_usuario varchar(50), email varchar(100), senha varchar(80), nivel varchar (15), PRIMARY KEY (id_usuario)
+);
+
+CREATE TABLE categorias (
+id_categoria int (4)AUTO_INCREMENT, nome_categoria varchar(50), PRIMARY KEY (id_categoria)
+);
+
+placa
+nome do veiculo
+cor
+tamanho? pequeno, medio, grande
+categoria
+estacionado? sim ou não
+hora entrada
+hora Saida
+valor (a cada 15 minutos)
+
+CREATE TABLE configuracoes (id integer AUTO_INCREMENT, total_vagas int(10), total_vagas_ocupadas int(10), valor_pequeno DECIMAL(10,2), valor_medio DECIMAL(10,2), valor_grande DECIMAL(10,2), PRIMARY KEY (id));
+INSERT INTo configuracoes (total_vagas, total_vagas_ocupadas, valor_pequeno, valor_medio, valor_grande) VALUES (50 ,0 ,3 ,5 ,8);
+CREATE TABLE cores (cor varchar(30));
+
+CREATE TABLE cores (cor varchar(30));
+
+CREATE TABLE veiculos (id_veiculo int(7) AUTO_INCREMENT, placa varchar(10), nome_veiculo varchar (30), cor varchar(30), tamanho varchar(10), nome_categoria varchar(50), estacionado varchar(5), data_entrada TIMESTAMP DEFAULT CURRENT_TIMESTAMP, data_saida datetime, PRIMARY KEY (id_veiculo));
+
+CREATE TABLE usuario (id INT(4) AUTO_INCREMENT, nome VARCHAR(30), login VARCHAR(30), senha VARCHAR(80), nivel varchar(15), PRIMARY KEY (id));
+
+CREATE  TABLE valor (
+id_valor int (4)AUTO_INCREMENT, valor DECIMAL(10, 2), id_categoria integer, CONSTRAINT fk_CategoriaValor FOREIGN KEY (id_categoria) REFERENCES categoria (id_categoria)
+);
+
+CREATE TABLE entradas (
+id_entradas int(4)AUTO_INCREMENT, 
+data_entrada TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+data_saida TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+id_veiculo int, CONSTRAINT fk_VeiculoEntrada FOREIGN KEY (id_veiculo) REFERENCES veiculo (id_veiculo), 
+PRIMARY KEY (id_entradas)
+);
+
+CREATE TABLE pagamentos (id_pagamento int(10) AUTO_INCREMENT, valor DECIMAL(10,2), id_veiculo int(10), placa VARCHAR(10), PRIMARY KEY(id_pagamento));
+
+CREATE TABLE formas_pagamento (id_pagamento int (4)AUTO_INCREMENT, tipo_pagamento VARCHAR (30), PRIMARY KEY (id_pagamento));
+
+
+CREATE TABLE infosEstacionamento (
+id_infos int (4)AUTO_INCREMENT, nome_estacionamento VARCHAR (45), endereço VARCHAR (50), mensagem VARCHAR(110), telefone VARCHAR (15), PRIMARY KEY (id_infos)
+);
+
+select data_entrada, data_saida, TIMESTAMPDIFF(MINUTE, data_entrada, data_saida) FROM veiculos WHERE id_veiculo='1';

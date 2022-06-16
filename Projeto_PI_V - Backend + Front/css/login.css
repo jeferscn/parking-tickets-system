@@ -1,0 +1,127 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+td {
+    color: #ffffff;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* -------------------------------------------------------- BACKGROUND IMG ------------------------------------------------------------ */
+
+.bg-image {
+    background-image: url('../img/cars-bg2.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+/* -------------------------------------------------------- CONTEÚDO DA DIV LOGIN ------------------------------------------------------------ */
+
+#login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+    width: 20vw;
+    height: 40vh;
+    box-shadow: 10px 1px 25px 1px #000000;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 50px;
+    opacity: 0.8;
+    color: #78f051;
+}
+
+.card-header::after {
+    content: "";
+    width: 70px;
+    height: 1px;
+    color: #78f051;
+    display: block;
+    margin-top: -17px;
+    margin-left: -5px;
+}
+
+.card-content-area .email .senha {
+   
+    color: #78f051;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+
+.card-content-area {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.card-content-area input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 0 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #78f051;
+    outline: none;
+    color: #78f051;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer .submit {
+    width: 20vw;
+    height: 40px;
+    border: none;
+    background-color: #78f051;
+    color: #000000;
+    margin: 10px 0;
+}
+
+.card-footer a {
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.8;
+    color: #78f051;
+    text-decoration: none;
+}
+
+.card-footer:hover 
+.submit:hover {
+    transition: 0.5s;
+    background: #51F0E5;
+    border: none;
+}
+
+@media screen and (max-width: 1100px) {
+
+  
+   
+  }

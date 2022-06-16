@@ -1,0 +1,31 @@
+Integração:
+
+08/06/22 > Efetudo a integração da tela de login do front com o back, assim como o CSS
+         > Acrescentado a pasta CSS no projeto do back
+	 > Acrescentado a pasta img no projeto do back
+
+15/06/22 > diminuido o tamanho da fonte da sidebar.
+         > alterado css da tela de login
+	 > organizado o código css da tela de login
+	 > inserido a sidebar na tela de configurações
+         > ajustado o conteúdo main da tela configurações
+         > Acrescentado a sidebar na tela de categorias
+         > Acrescentado o css da tela de categorias
+         > Acrescentado a sidebar na tela de cadastro usuários
+         > Acrescentado o css na tela de cadastrar usuários
+
+16/06/22 > inserido css nos inputs restantes.
+         > adicionado uma condição no session_start line 4, para sumir com o erro que aparecia.
+         > identado trechos de códigos de todos os arquivos.php
+         > ajustado título de Painel e também a div dos totalizadores de vagas.
+         > ajustado e customizado os elementos da tela de entrada.
+	 > ajustado e customizado os elementos da tela de configurações.
+	 > ajustado e customizado os elementos da tela de cadastrar categoria.
+	 > ajustado e customizado os elementos da tela de cadastrar usuário.
+	 > embaçado o bg da tela login, ajustado label Usuário.	
+         > ajustado a topbar, função e nome do usuário
+         > ajustado e customizado os elementos da tela de saídas.
+         > editado os totalizadores de vagas no painel
+
+OBS: todos os arquivos .php respectivos foram ajustados ou identados de acordo com a necessidade de css.
+        

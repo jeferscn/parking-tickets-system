@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(231, 241, 248);
+}
+
+/* --------------------------------------------------- MAIN ---------------------------------------------------*/
+
+main {
+    margin: 0 auto 0 250px;
+    padding-top: 60px;
+}
+
+
+input, select {
+    border: 1px solid rgb(209, 209, 209);
+    outline: 0;
+    background: #f2f2f2;
+    margin: 0 0 2px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+input:hover {
+    border: 1px solid #51F0E5;
+    transition: 0.3s;
+}
+
+label {
+    color: #ffffff;
+}
+
+button {
+    background-color: #59E38B;
+    color: #000000;
+    padding: 10px 50px;
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover {
+    background-color: #51F0E5;
+    transition: 0.5s;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin: 30px 0 0 30px;
+    color: rgb(39, 39, 54);
+}
+
+td {
+    color: #ffffff;
+}
+
+.titulo {
+    width: 25vw;
+    height: 11vh;
+}
+
+.container-dados-config {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 50vw;
+    height: 15vh;
+    padding: 20px 0px 150px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgb(39, 39, 54);
+    box-shadow: 1px 1px 25px 1px #525252;
+}
+
+.dados-config {
+    display: flex;
+    margin: auto;
+    width: 50vw;
+    height: 4vh;
+    height: auto;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
+
+@media(max-width: 860px) {.sidebar{
+        height: auto;
+        width: 70px;
+        left: 0;
+        margin: 100px 0;
+    }
+
+    header, #btn, #cancel {
+        display: none;
+    }
+
+    span {
+        position: absolute;
+        margin-left: 23px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sidebar a {
+        height: 60px;
+    }
+
+    .sidebar a i {
+        margin-left: -10px;
+    }
+
+    a:hover {
+        width: 200px;
+        background: inherit;
+    }
+
+    .sidebar a:hover span {
+        opacity: 1;
+        visibility: visible;
+    } 
+}  
