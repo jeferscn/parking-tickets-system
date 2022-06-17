@@ -61,7 +61,7 @@ td {
 }
 
 .titulo {
-    width: 25vw;
+    width: max(500px, 25vw);
     height: 11vh;
 }
 
@@ -90,6 +90,12 @@ td {
 }
 
 /* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
+
+@media(max-width: 1024px) {
+    .container-dados-config {
+        height: 20vh;
+    }
+}
 
 @media(max-width: 860px) {.sidebar{
         height: auto;
@@ -126,4 +132,18 @@ td {
         opacity: 1;
         visibility: visible;
     } 
-}  
+    /* --------------------------------------------------- MAIN ---------------------------------------------------*/
+    main {
+        margin: 0 auto 0 70px;
+        padding-top: 60px;
+        width: 140vw;
+        /* background-color: #51F0E5; */
+    }
+}
+
+@media(max-width: 360px) {
+    .container-dados-config {
+        width: 90vw;
+        height: 20vh;
+    }
+}

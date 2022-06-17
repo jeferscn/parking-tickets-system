@@ -26,7 +26,7 @@ p {
     width: 18vw;
     height: 5vh;
     margin: -60px auto 0 120px;
-    font-size: 1.8em;
+    font-size: min(20px, 1.8em);
     color: #59E38B;
 }
 
@@ -76,13 +76,13 @@ p {
 
 #vagas-icon {
     margin: 30px 0 0 20px;
-    font-size: 80px;
+    font-size: min(80px, 15vw);
     color: #78F051;
 }
 
 .valor-total {
     margin: auto 0 0 190px;
-    font-size: 80px;
+    font-size: max(50px, 5vw);
     color: #59E38B;
 }
 
@@ -92,153 +92,113 @@ p {
     height: 30vh;
     margin: auto;
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: #ffffff49;
 }
 
 /* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
 
 @media(max-width: 1600px) {.container-dados-vagas {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        max-width: 1290px;
-        height: 1000px;
-        padding: 20px 0px;
-        margin-left: 270px;
-        border-radius: 10px;
-        background-color: rgb(39, 39, 54);
-        box-shadow: 1px 1px 25px 1px #525252;
+        width: 73vw;
+        height: 40vh;
+        margin-left: 90px;
     }
 
     .container-dados-vagas-02 {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        max-width: 1290px;
-        height: 290px;
-        padding: 20px 0px;
-        margin-top: 50px;
-        margin-left: 270px;
-        margin-bottom: 40px;
-        border-radius: 10px;
-        background-color: rgb(39, 39, 54);
-        box-shadow: 1px 1px 25px 1px #525252;
+        width: 73vw;
+        height: 30vh;
+        margin-left: 90px;
     }
 
     .dados-vagas {
-        width: 500px;
-        height: 300px;
+        width: 30vw;
+        height: 35vh;
         margin: auto;
-        padding: 30px;
-        border-radius: 10px;
-        background-color: #ffffff;
     }
 
     .dashboard {
-        width: 1150px;
-        height: 180px;
+        width: 70vw;
+        height: 28vh;
         margin: auto;
-        padding: 50px;
         border-radius: 10px;
-        background-color: #ffffff;
+        background-color: #ffffff49;
+    }
+
+    .valor-total {
+        margin: 50px 0 0 190px;
+        font-size: max(50px, 5vw);
+        color: #59E38B;
     }
 } 
 
 @media(max-width: 1440px) {.container-dados-vagas {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        max-width: 1000px;
-        height: 600px;
-        padding: 20px 0px;
-        margin-left: 270px;
-        border-radius: 10px;
-        background-color: rgb(39, 39, 54);
-        box-shadow: 1px 1px 25px 1px #525252;
+        width: 70vw;
+        height: 40vh;
+        margin-left: 90px;
     }
 
     .container-dados-vagas-02 {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        max-width: 1000;
-        height: 300px;
-        padding: 20px 0px;
-        margin-top: 80px;
-        margin-left: 270px;
-        border-radius: 10px;
-        background-color: rgb(39, 39, 54);
-        box-shadow: 1px 1px 25px 1px #525252;
+        width: 70vw;
+        height: 30vh;
+        margin-left: 90px;
     }
 
     .dados-vagas {
-        width: 300px;
-        height: 200px;
+        width: 25vw;
+        height: 30vh;
         margin: auto;
-        border-radius: 10px;
-        background-color: #ffffff;
     }
 
     .dashboard {
-        width: 600px;
-        height: 200px;
+        width: 65vw;
+        height: 28vh;
         margin: auto;
         border-radius: 10px;
-        background-color: #ffffff;
+        background-color: #ffffff49;
+    }
+
+    .valor-total {
+        margin: 50px 0 0 140px;
+        font-size: max(50px, 5vw);
+        color: #59E38B;
     }
 }
 
 @media(max-width: 1024px) {.container-dados-vagas {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        max-width: 900;
-        height: 1000px;
-        padding: 20px 0px;
-        margin-left: 270px;
-        border-radius: 10px;
-        background-color: rgb(39, 39, 54);
-        box-shadow: 1px 1px 25px 1px #525252;
+    width: 60vw;
+    height: 62vh;
+    margin-left: 90px;
     }
 
     .container-dados-vagas-02 {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        max-width: 900px;
-        height: 1000px;
-        padding: 20px 0px;
-        margin-top: 80px;
-        margin-left: 270px;
-        border-radius: 10px;
-        background-color: rgb(39, 39, 54);
-        box-shadow: 1px 1px 25px 1px #525252;
+        width: 60vw;
+        height: 30vh;
+        margin-left: 90px;
     }
 
     .dados-vagas {
-        width: 300px;
-        height: 200px;
+        width: 35vw;
+        height: 30vh;
         margin: auto;
-        border-radius: 10px;
-        background-color: #ffffff;
     }
 
     .dashboard {
-        width: 600px;
-        height: 200px;
+        width: 55vw;
+        height: 25vh;
         margin: auto;
         border-radius: 10px;
-        background-color: #ffffff;
+        background-color: #ffffff49;
+    }
+
+    .valor-total {
+        margin: 50px 0 0 150px;
+        font-size: max(50px, 5vw);
+        color: #59E38B;
     }
 } 
 
-@media(max-width: 860px) {.sidebar{
+@media(max-width: 860px) {
+    /* --------------------------------------------------------------SIDEBAR--------------------------------------------------------------- */
+    .sidebar {
         height: auto;
         width: 70px;
         left: 0;
@@ -273,50 +233,139 @@ p {
         opacity: 1;
         visibility: visible;
     }
+    /* --------------------------------------------------------------MAIN--------------------------------------------------------------- */
+    main {
+        margin: 0 auto 0 70px;
+        padding-top: 70px;
+   }
     
     .container-dados-vagas {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        max-width: 1000px;
-        height: 700px;
-        padding: 20px 0px;
-        margin-left: 100px;
-        border-radius: 10px;
-        background-color: rgb(39, 39, 54);
-        box-shadow: 1px 1px 25px 1px #525252;
-    }
-
+        width: 60vw;
+        height: 62vh;
+        margin-left: 130px;
+        }
+    
     .container-dados-vagas-02 {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        max-width: 1000;
-        height: 300px;
-        padding: 20px 0px;
-        margin-top: 80px;
-        margin-left: 100px;
-        border-radius: 10px;
-        background-color: rgb(39, 39, 54);
-        box-shadow: 1px 1px 25px 1px #525252;
+        width: 60vw;
+        height: 30vh;
+        margin-left: 130px;
     }
 
     .dados-vagas {
-        width: 300px;
-        height: 300px;
+        width: 35vw;
+        height: 30vh;
         margin: auto;
-        border-radius: 10px;
-        background-color: #ffffff;
     }
 
     .dashboard {
-        width: 600px;
-        height: 200px;
-        padding: 40px;
+        width: 40vw;
+        height: 20vh;
         margin: auto;
         border-radius: 10px;
-        background-color: #ffffff;
+        background-color: #ffffff49;
     }
-}  
+
+    .valor-total {
+        margin: 70px 0 0 120px;
+        font-size: max(50px, 5vw);
+        color: #59E38B;
+    }
+} 
+
+@media(max-width: 540px) {
+    /* --------------------------------------------------------------MAIN--------------------------------------------------------------- */
+    main {
+        margin: 0 auto 0 70px;
+        padding-top: 70px;
+    }
+
+    .container-dados-vagas {
+        width: 70vw;
+        height: 62vh;
+        margin-left: 50px;
+        }
+
+    .container-dados-vagas-02 {
+        width: 70vw;
+        height: 30vh;
+        margin-left: 50px;
+    }
+
+    .dados-vagas {
+        width: 55vw;
+        height: 30vh;
+        margin: auto;
+    }
+
+    .dashboard {
+        width: 45vw;
+        height: 20vh;
+        margin: auto;
+        border-radius: 10px;
+        background-color: #ffffff49;
+    }
+
+    .valor-total {
+        margin: 70px 0 0 120px;
+        font-size: max(50px, 5vw);
+        color: #59E38B;
+    }
+}
+
+@media(max-width: 360px) {
+/* --------------------------------------------------------------TOPBAR--------------------------------------------------------------- */
+    #user-name {
+        font-family: Arial, Helvetica, sans-serif;
+        float: right;
+        margin: 13px 25px 10px 0;
+        font-size: 0.9em;
+        color: #ffffff;
+    }
+
+    #user-icon {
+        float: right;
+        margin: 15px 25px 10px 0;
+        font-size: 0.9em;
+    }
+/* --------------------------------------------------------------MAIN--------------------------------------------------------------- */
+    main {
+        margin: 0 0 0 70px;
+        padding-top: 70px;
+    }
+
+    p {
+        margin: -60px auto 0 80px;
+    }
+
+    .container-dados-vagas {
+        width: 70vw;
+        height: 62vh;
+        margin-left: 25px;
+        }
+
+    .container-dados-vagas-02 {
+        width: 70vw;
+        height: 30vh;
+        margin-left: 25px;
+    }
+
+    .dados-vagas {
+        width: 55vw;
+        height: 30vh;
+        margin: auto;
+    }
+
+    .dashboard {
+        width: 40vw;
+        height: 20vh;
+        margin: auto;
+        border-radius: 10px;
+        background-color: #ffffff49;
+    }
+
+    .valor-total {
+        margin: 90px 0 0 70px;
+        font-size: max(50px, 5vw);
+        color: #59E38B;
+    }
+}

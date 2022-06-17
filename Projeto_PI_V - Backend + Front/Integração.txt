@@ -27,5 +27,7 @@ Integração:
          > ajustado e customizado os elementos da tela de saídas.
          > editado os totalizadores de vagas no painel
 
+17/06/22 > ajustado a responsividade de quase todas as telas
+
 OBS: todos os arquivos .php respectivos foram ajustados ou identados de acordo com a necessidade de css.
         

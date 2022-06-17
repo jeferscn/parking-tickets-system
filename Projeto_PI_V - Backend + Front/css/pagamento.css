@@ -61,7 +61,7 @@ td {
 }
 
 .titulo {
-    width: 25vw;
+    width: max(500px, 25vw);
     height: 11vh;
 }
 
@@ -98,7 +98,42 @@ td {
 
 /* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
 
-@media(max-width: 860px) {.sidebar{
+@media(max-width: 1600px) {
+    .container-dados-config {
+        width: 60vw;
+    }
+
+    .dados-config {
+        width: 40vw;
+        /* background-color: #51F0E5; */
+    }
+}
+
+@media(max-width: 1440px) {
+    .container-dados-config {
+        width: 60vw;
+    }
+
+    .dados-config {
+        width: 45vw;
+        /* background-color: #51F0E5; */
+    }
+}
+
+@media(max-width: 1024px) {
+    .container-dados-config {
+        width: 70vw;
+    }
+
+    .dados-config {
+        width: 55vw;
+        /* background-color: #51F0E5; */
+    }
+}
+
+@media(max-width: 860px) {
+    /* --------------------------------------------------- SIDEBAR ---------------------------------------------------*/
+    .sidebar{
         height: auto;
         width: 70px;
         left: 0;
@@ -133,4 +168,50 @@ td {
         opacity: 1;
         visibility: visible;
     } 
+    /* --------------------------------------------------- MAIN ---------------------------------------------------*/
+    main {
+        margin: 0 auto 0 70px;
+        padding-top: 60px;
+    }
+
+    .container-dados-config {
+        width: 80vw;
+    }
+
+    .dados-config {
+        width: 75vw;
+        /* background-color: #51F0E5; */
+    }
+    .btn-container {
+        width: 10vw;
+        height: 5vh;
+        margin-right: 80px;
+        /* background-color: rgb(99, 64, 64); */
+    }
+}  
+
+@media(max-width: 360px) {
+    /* --------------------------------------------------- MAIN ---------------------------------------------------*/
+    main {
+        margin: 0 auto 0 70px;
+        padding-top: 60px;
+        width: 140vw;
+        /* background-color: #51F0E5; */
+    }
+
+    .container-dados-config {
+        width: 120vw;
+        height: 19vh;
+    }
+
+    .dados-config {
+        width: 75vw;
+        /* background-color: #51F0E5; */
+    }
+    .btn-container {
+        width: 10vw;
+        height: 5vh;
+        margin-right: 80px;
+        /* background-color: rgb(99, 64, 64); */
+    }
 }  

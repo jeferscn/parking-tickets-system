@@ -164,9 +164,7 @@
                         $query = "INSERT INTO pagamentos (valor, tipo_pagamento, id_veiculo, placa) VALUES ('$valor_total_a_pagar', '{$_POST['selected_tipo_pagamento']}', '$id_veiculo', '$placa')";
                         mysqli_query($con, $query);
                         echo "<script>window.open('imprimir.php?veiculo=" . $id_veiculo . "&saida=sim', '_blank');</script>";
-                        echo "<script>alert('Finalização realizada com sucesso!');top.location.href='saida-veiculo.php';</script>";
-                        
-                        
+                        echo "<script>alert('Finalização realizada com sucesso!');top.location.href='saida-veiculo.php';</script>";                        
                     }
                     ?>
                     <tr>

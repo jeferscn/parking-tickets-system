@@ -16,7 +16,6 @@ main {
     padding-top: 60px;
 }
 
-
 input, select {
     border: 1px solid rgb(209, 209, 209);
     outline: 0;
@@ -61,7 +60,7 @@ td {
 }
 
 .titulo {
-    width: 25vw;
+    width: max(500px, 25vw);
     height: 11vh;
 }
 
@@ -106,7 +105,31 @@ td {
 
 /* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
 
-@media(max-width: 860px) {.sidebar{
+@media(max-width: 1600px){
+    .container-dados-config {
+        width: 40vw;
+    }
+
+    .dados-config {
+        width: 30vw;
+        /* background-color: cadetblue */
+    }
+}
+
+@media(max-width: 1024px){
+    .container-dados-config {
+        width: 60vw;
+    }
+
+    .dados-config {
+        width: 55vw;
+        /* background-color: cadetblue */
+    }
+}
+
+@media(max-width: 860px) {
+    /* --------------------------------------------------------------SIDEBAR--------------------------------------------------------------- */
+    .sidebar{
         height: auto;
         width: 70px;
         left: 0;
@@ -140,5 +163,92 @@ td {
     .sidebar a:hover span {
         opacity: 1;
         visibility: visible;
-    } 
+    }
+    /* --------------------------------------------------- MAIN ---------------------------------------------------*/
+    main {
+        margin: 0 auto 0 70px;
+        padding-top: 60px;
+        /* background-color: yellowgreen; */
+    }
+    
+    .container-dados-config {
+        width: 70vw;
+        margin-right: 120px;
+    }
+
+    .dados-config {
+        margin-right: 50px;
+        width: 60vw;
+        /* background-color: cadetblue */
+    }
+}
+
+@media(max-width: 740px) {
+    /* --------------------------------------------------- MAIN ---------------------------------------------------*/
+    main {
+        margin: 0 auto 0 70px;
+        padding-top: 60px;
+    }
+    
+    .container-dados-config {
+        width: 70vw;
+        margin-left: 55px;
+    }
+
+    .dados-config {
+        margin-right: 90px;
+        padding: 10px;
+        width: 50vw;
+        /* background-color: cadetblue */
+    }
+
+    .btn-container {
+        margin: 22px 0 0 70px;
+        width: 10vw;
+        height: 6vh;
+        /* background-color: #b8f051; */
+    }
+}
+
+@media(max-width: 540px) {
+    /* --------------------------------------------------- MAIN ---------------------------------------------------*/
+    main {
+        margin: 0 auto 0 70px;
+        padding-top: 60px;
+    }
+    
+    .container-dados-config {
+        width: 70vw;
+        height: 37vh;
+        margin-left: 45px;
+    }
+
+    .dados-config {
+        margin-right: 200px;
+        width: 10vw;
+        /* background-color: cadetblue */
+    }
+
+    .btn-container {
+        margin: 50px 0 0 70px;
+        width: 10vw;
+        height: 6vh;
+        /* background-color: #b8f051; */
+    }
+}
+
+@media(max-width: 360px) {
+    /* --------------------------------------------------- MAIN ---------------------------------------------------*/
+    main {
+        margin: 0 0 0 70px;
+        width: 130vw;
+        padding-top: 60px;
+        /* background-color: #51F0E5; */
+    }
+    
+    .container-dados-config {
+        width: 90vw;
+        height: 37vh;
+        margin-left: 75px;
+    }
 }  

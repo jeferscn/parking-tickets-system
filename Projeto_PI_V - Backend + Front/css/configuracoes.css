@@ -16,7 +16,6 @@ main {
     padding-top: 60px;
 }
 
-
 input {
     border: 1px solid rgb(209, 209, 209);
     outline: 0;
@@ -101,11 +100,41 @@ td {
     margin: 50px 500px -75px;
     width: 10vw;
     height: 5vh;
-    /* background-color: #fac4ff; */
-    
+    /* background-color: #fac4ff; */ 
 }
 
 /* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
+
+@media(max-width: 1600px) {
+    #div-btn {
+        margin: 90px 500px -75px;
+        /* background-color: #fac4ff; */ 
+    }
+}
+
+@media(max-width: 1440px) {
+    #div-btn {
+        margin: 130px 500px -75px;
+        /* background-color: #fac4ff; */ 
+    }
+}  
+
+@media(max-width: 1024px) {
+    #div-btn {
+        margin: 50px 500px -75px;
+        /* background-color: #fac4ff; */ 
+    }
+
+    .container-dados-config {
+        display: flex;
+    }
+
+    .container-elementos {
+        width: 50vw;
+        height: 30vw;
+        /* background-color: rgb(177, 233, 214); */
+    }
+} 
 
 @media(max-width: 860px) {.sidebar{
         height: auto;
@@ -141,5 +170,31 @@ td {
     .sidebar a:hover span {
         opacity: 1;
         visibility: visible;
-    } 
+    }
+    
+    main {
+        margin: 0 auto 0 70px;
+        padding-top: 60px;
+    }
+
+    #div-btn {
+        margin: 50px 500px -75px;
+        background-color: #fac4ff;
+    }
+
+    .container-dados-config {
+        display: flex;
+    }
+
+    .container-elementos {
+        width: 50vw;
+        height: 30vw;
+        /* background-color: rgb(177, 233, 214); */
+    }
+
+    .dados-config {
+        width: 20vw;
+        height: 0vh;
+        margin-top: 100px;
+    }
 }  
