@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     background-color: rgb(231, 241, 248);
 }
+
 
 /* --------------------------------------------------- MAIN ---------------------------------------------------*/
 
@@ -17,7 +18,8 @@ main {
     color: rgb(39, 39, 54);
 }
 
-input, select {
+input,
+select {
     border: 1px solid rgb(209, 209, 209);
     outline: 0;
     background: #f2f2f2;
@@ -28,18 +30,14 @@ input, select {
     border-radius: 5px;
 }
 
-input:hover {
-    border: 1px solid #51F0E5;
-    transition: 0.3s;
-}
-
 label {
     color: #ffffff;
 }
 
 select {
     outline: none;
-    border: 1px solid #8d8d8d;;
+    border: 1px solid #8d8d8d;
+    ;
     border-radius: 5px;
 }
 
@@ -113,7 +111,6 @@ h1 {
     margin-left: 9px;
     border-radius: 5px;
     border: 1px solid #78F051;
-
 }
 
 .btn-saida:hover {
@@ -179,9 +176,12 @@ th {
     background-color: #59E38B;
     color: rgb(0, 0, 0);
 }
-td, .senhaColuna{
+
+td,
+.senhaColuna {
     width: 10%;
 }
+
 th,
 td {
     padding: 10px;
@@ -191,6 +191,7 @@ td:hover {
     background-color: #55fac05b;
     transition: 0.3s;
 }
+
 
 /* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
 
@@ -202,65 +203,57 @@ td:hover {
 
 @media(max-width: 860px) {
     /* --------------------------------------------------- SIDEBAR ---------------------------------------------------*/
-    .sidebar{
+    .sidebar {
         height: auto;
         width: 70px;
         left: 0;
         margin: 100px 0;
     }
-
-    header, #btn, #cancel {
+    header,
+    #btn,
+    #cancel {
         display: none;
     }
-
     span {
         position: absolute;
         margin-left: 23px;
         opacity: 0;
         visibility: hidden;
     }
-
     .sidebar a {
         height: 60px;
     }
-
     .sidebar a i {
         margin-left: -10px;
     }
-
     a:hover {
         width: 200px;
         background: inherit;
     }
-
     .sidebar a:hover span {
         opacity: 1;
         visibility: visible;
-    } 
+    }
     /* --------------------------------------------------- MAIN ---------------------------------------------------*/
     main {
         margin: 0 auto 0 70px;
         padding-top: 60px;
         /* background-color: #51F0E5; */
     }
-
     .container-filtro {
         width: 70vw;
         /* background-color: #e29aff; */
     }
-    
     .filtro {
         margin-left: 10px;
         /* background-color: #51F0E5; */
     }
-    
     .div-btn-gerar {
         width: 10vw;
         height: 60px;
         margin-top: 15px;
         /* background-color: #eaff2b; */
     }
-    
     .btn-gerar {
         background-color: #59E38B;
         color: #000000;
@@ -270,40 +263,34 @@ td:hover {
     }
 }
 
-@media(max-width: 730px) { 
+@media(max-width: 730px) {
     /* --------------------------------------------------- MAIN ---------------------------------------------------*/
     main {
         margin: 0 auto 0 70px;
         padding-top: 60px;
         /* background-color: #51F0E5; */
     }
-
     label {
         color: rgb(39, 39, 54);
     }
-
     .container-saidas {
         background-color: rgb(231, 241, 248);
         box-shadow: none;
     }
-
     .container-filtro {
         width: 70vw;
         /* background-color: #e29aff; */
     }
-    
     .filtro {
         margin-left: -40px;
         /* background-color: #51F0E5; */
     }
-    
     .div-btn-gerar {
         width: 10vw;
         height: 60px;
         margin-top: 15px;
         /* background-color: #eaff2b; */
     }
-    
     .btn-gerar {
         background-color: #59E38B;
         color: #000000;
@@ -320,33 +307,27 @@ td:hover {
         padding-top: 60px;
         /* background-color: #51F0E5; */
     }
-
     label {
         color: rgb(39, 39, 54);
     }
-
     .container-saidas {
         background-color: rgb(231, 241, 248);
         box-shadow: none;
     }
-
     .container-filtro {
         width: 70vw;
         /* background-color: #e29aff; */
     }
-    
     .filtro {
         margin-left: -40px;
         /* background-color: #51F0E5; */
     }
-    
     .div-btn-gerar {
         width: 10vw;
         height: 60px;
         margin-top: 15px;
         /* background-color: #eaff2b; */
     }
-    
     .btn-gerar {
         background-color: #59E38B;
         color: #000000;
