@@ -58,17 +58,14 @@
             <i class="fas fa-cog"></i>
             <span>configurações</span>
         </a>
-        <a class="a-efeito" href="cadastro-categoria.php">
+        <a class="a-efeito">
             <i class="fas fa-clipboard-list"></i>
-            <span>cadastrar categoria</span>
-        </a>
-        <a class="a-efeito" href="cadastro-forma-pagamento.php">
-            <i class="fas fa-money-check-alt"></i>
-            <span>cadastrar pagamento</span>
-        </a>
-        <a class="a-efeito" href="cadastro-usuario.php">
-            <i class="fas fa-user-plus"></i>
-            <span>cadastrar usuario</span>
+            <select name="cadastrar" id="cadOpcoes" onchange="location = this.value;">
+                <option value="" selected> cadastros </option>
+                <option value="cadastro-categoria.php">Cadastrar categoria</option>
+                <option value="cadastro-forma-pagamento.php">Cadastrar pagamento</option>
+                <option value="cadastro-usuario.php">Cadastrar usuario</option>
+            </select>
         </a>
     <?php } ?>
 

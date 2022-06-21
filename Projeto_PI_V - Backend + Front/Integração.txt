@@ -29,5 +29,14 @@ Integração:
 
 17/06/22 > ajustado a responsividade de quase todas as telas
 
+20/06 > corrigido o subtítulo da página cadastrar usuário
+      > inserido o select para cadastros na sidebar
+      > ajustado o css da opção de cadastros na sidebar reduzida (tela menor)
+      > retirado a div de dashboard da home page
+      > alterado o CSS dos inputs da tela de LOGIN
+      > ajustado os elementos em forma de table da tela Cadastrar Pagamento
+      > ajustado a responsividade da tela Cadastrar Pagamento
+      > alterado o media querie 360px (height da div) da tela de usuários
+
 OBS: todos os arquivos .php respectivos foram ajustados ou identados de acordo com a necessidade de css.
         

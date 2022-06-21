@@ -144,6 +144,6 @@ td {
 @media(max-width: 360px) {
     .container-dados-config {
         width: 90vw;
-        height: 20vh;
+        height: 25vh;
     }
 }

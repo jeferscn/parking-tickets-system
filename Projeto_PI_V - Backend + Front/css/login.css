@@ -11,15 +11,14 @@ td {
     0% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
-
     100% {
         background-position: 0% 50%;
     }
 }
+
 
 /* -------------------------------------------------------- BACKGROUND IMG ------------------------------------------------------------ */
 
@@ -28,6 +27,7 @@ td {
     background-size: cover;
     background-position: center center;
 }
+
 
 /* -------------------------------------------------------- CONTEÚDO DA DIV LOGIN ------------------------------------------------------------ */
 
@@ -53,7 +53,7 @@ td {
     font-size: 30px;
     padding-bottom: 50px;
     opacity: 0.8;
-    color: #78f051;
+    color: #51F0E5;
 }
 
 .card-header::after {
@@ -67,12 +67,10 @@ td {
 }
 
 .card-content-area .email .senha {
-   
     color: #78f051;
     font-size: 12px;
     opacity: 0.8;
 }
-
 
 .card-content-area {
     display: flex;
@@ -81,14 +79,15 @@ td {
 }
 
 .card-content-area input {
-    width: 100%;
-    margin-top: 10px;
-    padding: 0 5px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #78f051;
-    outline: none;
-    color: #78f051;
+    width: 240px;
+    border: 1px solid rgb(209, 209, 209);
+    outline: 0;
+    background: #f2f2f2;
+    margin: 0 0 2px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 5px;
 }
 
 .card-footer {
@@ -100,7 +99,7 @@ td {
     width: 20vw;
     height: 40px;
     border: none;
-    background-color: #78f051;
+    background-color: #51F0E5;
     color: #000000;
     margin: 10px 0;
 }
@@ -113,15 +112,10 @@ td {
     text-decoration: none;
 }
 
-.card-footer:hover 
-.submit:hover {
+.card-footer:hover .submit:hover {
     transition: 0.5s;
-    background: #51F0E5;
+    background: #55FA63;
     border: none;
 }
 
-@media screen and (max-width: 1100px) {
-
-  
-   
-  }
+@media screen and (max-width: 1100px) {}

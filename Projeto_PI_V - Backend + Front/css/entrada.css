@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     background-color: rgb(231, 241, 248);
 }
+
 
 /* --------------------------------------------------- MAIN ---------------------------------------------------*/
 
@@ -16,8 +17,8 @@ main {
     padding-top: 60px;
 }
 
-
-input, select {
+input,
+select {
     border: 1px solid rgb(209, 209, 209);
     outline: 0;
     background: #f2f2f2;
@@ -133,7 +134,7 @@ h1 {
     position: absolute;
     width: 13px;
     height: 13px;
-    background-color:#59E38B;
+    background-color: #59E38B;
     border-radius: 50%;
     opacity: 0;
     transition: all 600ms ease-in-out;
@@ -147,14 +148,14 @@ h1 {
     box-shadow: 0 0 5px #59E38B;
 }
 
-/* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
-@media(max-width: 1440px) {
 
+/* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
+
+@media(max-width: 1440px) {
     .dados-vagas {
         width: 50vw;
         /* background-color: #59E38B; */
     }
-
     .container-tamanho {
         margin: 40px 0 0 210px;
         /* background-color: #4eec27; */
@@ -162,52 +163,46 @@ h1 {
 }
 
 @media(max-width: 1024px) {
-
     .dados-vagas {
         width: 75vw;
         /* background-color: #59E38B; */
     }
-
     .container-tamanho {
         width: 40vw;
         margin: 40px 0 0 90px;
         /* background-color: #4eec27; */
     }
-}  
+}
 
 @media(max-width: 860px) {
     /* --------------------------------------------------------------SIDEBAR--------------------------------------------------------------- */
-    .sidebar{
+    .sidebar {
         height: auto;
         width: 70px;
         left: 0;
         margin: 100px 0;
     }
-
-    header, #btn, #cancel {
+    header,
+    #btn,
+    #cancel {
         display: none;
     }
-
     span {
         position: absolute;
         margin-left: 23px;
         opacity: 0;
         visibility: hidden;
     }
-
     .sidebar a {
         height: 60px;
     }
-
     .sidebar a i {
         margin-left: -10px;
     }
-
     a:hover {
         width: 200px;
         background: inherit;
     }
-
     .sidebar a:hover span {
         opacity: 1;
         visibility: visible;
@@ -218,26 +213,20 @@ h1 {
         padding-top: 70px;
         /* background-color: #51F0E5; */
     }
-
     .container-dados-vagas {
         width: 70vw;
         height: 35vh;
-
     }
-    
-
     .dados-vagas {
         display: block;
         width: 20vw;
         background-color: rgb(39, 39, 54);
     }
-
     .container-tamanho {
         width: 40vw;
         margin: 180px 0 0 120px;
         /* background-color: #4eec27; */
     }
-
     .container-botoes {
         width: 17vw;
         margin: auto;
@@ -254,7 +243,6 @@ h1 {
         font-size: 0.9em;
         color: #ffffff;
     }
-
     #user-icon {
         float: right;
         margin: 15px 25px 10px 0;
@@ -262,33 +250,29 @@ h1 {
     }
     /* --------------------------------------------------------------MAIN--------------------------------------------------------------- */
     main {
-        margin: 0 auto 0 70px;
+        margin: 0 0 0 0px;
         padding-top: 70px;
         /* background-color: #51F0E5; */
     }
-
     .container-dados-vagas {
-        width: 75vw;
+        width: 73vw;
         height: 35vh;
-        margin-left: 20px;
+        margin-left: px;
     }
-
     .dados-vagas {
         display: block;
         width: 20vw;
         margin-left: 50px;
         background-color: rgb(39, 39, 54);
     }
-
     .container-tamanho {
         width: 50vw;
         margin: 180px 0 0 20px;
         /* background-color: #4eec27; */
     }
-
     .container-botoes {
         width: 17vw;
         margin-left: 70px;
         /* background-color: #51F0E5; */
     }
-}  
+}

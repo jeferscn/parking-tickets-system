@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     background-color: rgb(231, 241, 248);
 }
+
 
 /* --------------------------------------------------- MAIN ---------------------------------------------------*/
 
@@ -50,7 +51,7 @@ p {
     box-shadow: 1px 1px 25px 1px #525252;
 }
 
-.container-dados-vagas-02 {
+/* .container-dados-vagas-02 {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -62,7 +63,7 @@ p {
     border-radius: 10px;
     background-color: rgb(39, 39, 54);
     box-shadow: 1px 1px 25px 1px #525252;
-}
+} */
 
 .dados-vagas {
     flex-wrap: wrap;
@@ -86,35 +87,33 @@ p {
     color: #59E38B;
 }
 
-
-.dashboard {
+/* .dashboard {
     width: 82vw;
     height: 30vh;
     margin: auto;
     border-radius: 10px;
     background-color: #ffffff49;
-}
+} */
+
 
 /* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
 
-@media(max-width: 1600px) {.container-dados-vagas {
+@media(max-width: 1600px) {
+    .container-dados-vagas {
         width: 73vw;
         height: 40vh;
         margin-left: 90px;
     }
-
     .container-dados-vagas-02 {
         width: 73vw;
         height: 30vh;
         margin-left: 90px;
     }
-
     .dados-vagas {
         width: 30vw;
         height: 35vh;
         margin: auto;
     }
-
     .dashboard {
         width: 70vw;
         height: 28vh;
@@ -122,32 +121,29 @@ p {
         border-radius: 10px;
         background-color: #ffffff49;
     }
-
     .valor-total {
         margin: 50px 0 0 190px;
         font-size: max(50px, 5vw);
         color: #59E38B;
     }
-} 
+}
 
-@media(max-width: 1440px) {.container-dados-vagas {
+@media(max-width: 1440px) {
+    .container-dados-vagas {
         width: 70vw;
         height: 40vh;
         margin-left: 90px;
     }
-
     .container-dados-vagas-02 {
         width: 70vw;
         height: 30vh;
         margin-left: 90px;
     }
-
     .dados-vagas {
         width: 25vw;
         height: 30vh;
         margin: auto;
     }
-
     .dashboard {
         width: 65vw;
         height: 28vh;
@@ -155,7 +151,6 @@ p {
         border-radius: 10px;
         background-color: #ffffff49;
     }
-
     .valor-total {
         margin: 50px 0 0 140px;
         font-size: max(50px, 5vw);
@@ -163,24 +158,22 @@ p {
     }
 }
 
-@media(max-width: 1024px) {.container-dados-vagas {
-    width: 60vw;
-    height: 62vh;
-    margin-left: 90px;
+@media(max-width: 1024px) {
+    .container-dados-vagas {
+        width: 60vw;
+        height: 62vh;
+        margin-left: 90px;
     }
-
     .container-dados-vagas-02 {
         width: 60vw;
         height: 30vh;
         margin-left: 90px;
     }
-
     .dados-vagas {
         width: 35vw;
         height: 30vh;
         margin: auto;
     }
-
     .dashboard {
         width: 55vw;
         height: 25vh;
@@ -188,13 +181,12 @@ p {
         border-radius: 10px;
         background-color: #ffffff49;
     }
-
     .valor-total {
         margin: 50px 0 0 150px;
         font-size: max(50px, 5vw);
         color: #59E38B;
     }
-} 
+}
 
 @media(max-width: 860px) {
     /* --------------------------------------------------------------SIDEBAR--------------------------------------------------------------- */
@@ -204,31 +196,27 @@ p {
         left: 0;
         margin: 100px 0;
     }
-
-    header, #btn, #cancel {
+    header,
+    #btn,
+    #cancel {
         display: none;
     }
-
     span {
         position: absolute;
         margin-left: 23px;
         opacity: 0;
         visibility: hidden;
     }
-
     .sidebar a {
         height: 60px;
     }
-
     .sidebar a i {
         margin-left: -10px;
     }
-
     a:hover {
         width: 200px;
         background: inherit;
     }
-
     .sidebar a:hover span {
         opacity: 1;
         visibility: visible;
@@ -237,26 +225,22 @@ p {
     main {
         margin: 0 auto 0 70px;
         padding-top: 70px;
-   }
-    
+    }
     .container-dados-vagas {
         width: 60vw;
         height: 62vh;
         margin-left: 130px;
-        }
-    
+    }
     .container-dados-vagas-02 {
         width: 60vw;
         height: 30vh;
         margin-left: 130px;
     }
-
     .dados-vagas {
         width: 35vw;
         height: 30vh;
         margin: auto;
     }
-
     .dashboard {
         width: 40vw;
         height: 20vh;
@@ -264,13 +248,12 @@ p {
         border-radius: 10px;
         background-color: #ffffff49;
     }
-
     .valor-total {
         margin: 70px 0 0 120px;
         font-size: max(50px, 5vw);
         color: #59E38B;
     }
-} 
+}
 
 @media(max-width: 540px) {
     /* --------------------------------------------------------------MAIN--------------------------------------------------------------- */
@@ -278,25 +261,21 @@ p {
         margin: 0 auto 0 70px;
         padding-top: 70px;
     }
-
     .container-dados-vagas {
         width: 70vw;
         height: 62vh;
         margin-left: 50px;
-        }
-
+    }
     .container-dados-vagas-02 {
         width: 70vw;
         height: 30vh;
         margin-left: 50px;
     }
-
     .dados-vagas {
         width: 55vw;
         height: 30vh;
         margin: auto;
     }
-
     .dashboard {
         width: 45vw;
         height: 20vh;
@@ -304,7 +283,6 @@ p {
         border-radius: 10px;
         background-color: #ffffff49;
     }
-
     .valor-total {
         margin: 70px 0 0 120px;
         font-size: max(50px, 5vw);
@@ -313,7 +291,7 @@ p {
 }
 
 @media(max-width: 360px) {
-/* --------------------------------------------------------------TOPBAR--------------------------------------------------------------- */
+    /* --------------------------------------------------------------TOPBAR--------------------------------------------------------------- */
     #user-name {
         font-family: Arial, Helvetica, sans-serif;
         float: right;
@@ -321,40 +299,34 @@ p {
         font-size: 0.9em;
         color: #ffffff;
     }
-
     #user-icon {
         float: right;
         margin: 15px 25px 10px 0;
         font-size: 0.9em;
     }
-/* --------------------------------------------------------------MAIN--------------------------------------------------------------- */
+    /* --------------------------------------------------------------MAIN--------------------------------------------------------------- */
     main {
         margin: 0 0 0 70px;
         padding-top: 70px;
     }
-
     p {
         margin: -60px auto 0 80px;
     }
-
     .container-dados-vagas {
         width: 70vw;
         height: 62vh;
         margin-left: 25px;
-        }
-
+    }
     .container-dados-vagas-02 {
         width: 70vw;
         height: 30vh;
         margin-left: 25px;
     }
-
     .dados-vagas {
         width: 55vw;
         height: 30vh;
         margin: auto;
     }
-
     .dashboard {
         width: 40vw;
         height: 20vh;
@@ -362,7 +334,6 @@ p {
         border-radius: 10px;
         background-color: #ffffff49;
     }
-
     .valor-total {
         margin: 90px 0 0 70px;
         font-size: max(50px, 5vw);

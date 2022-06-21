@@ -61,9 +61,49 @@
         <div class="titulo">
             <h1>Cadastrar Pagamento</h1>
         </div>
-        <div class="container-dados-config">
-            <form class="form" action="cadastro-forma-pagamento.php" method="POST" name="categoria">     
-                <div class="dados-config">   
+        <form class="form" action="cadastro-forma-pagamento.php" method="POST" name="categoria">
+            <div class="container-dados-config">
+                <table align="center">
+                    <tr>
+                        <td colspan="2">
+                            Forma de pagamento:
+                            <br>
+                            <input type="text" name="tipo_pagamento" placeholder="Ex.: Cartão Débito" value="<?php echo @$_POST['tipo_pagamento']; ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                        <button class="submit-button" type="submit" value="Gravar" name="botao">Gravar</button>
+                        </td>
+                    </tr>
+                    <!-- EXCLUIR -->
+                    <tr>
+                        <td colspan="2">
+                            Excluir forma de pagamento:
+                                <br>
+                                <select name="selected_pagamento">
+                                <option value="">Selecionar forma de pagamento</option>
+                                <?php
+                                $query = "SELECT * FROM formas_pagamento ORDER BY tipo_pagamento";
+                                $result_query = mysqli_query($con, $query);
+                                while ($query = mysqli_fetch_assoc($result_query)) { ?>
+                                    <option value="<?php echo $query['tipo_pagamento']; ?>">
+                                        <?php echo $query['tipo_pagamento'] ?>
+                                    </option>
+                                <?php
+                                }
+                                ?>
+                            </select>
+                        </td>
+                        <tr>
+                            <td colspan="2">
+                                <button class="botao-excluir" type="submit" value="Excluir" name="botao">Excluir</button>
+                                <input type="hidden" name="id_pagamento" value="<?php echo @$_REQUEST['id_pagamento'] ?>" />
+                            </td>
+                        </tr>
+                    </tr>
+                </table>
+                <!-- <div class="dados-config">   
                     <label for="">Forma de pagamento:</label>
                     <input type="text" name="tipo_pagamento" placeholder="Ex.: Cartão Débito" value="<?php echo @$_POST['tipo_pagamento']; ?>">
 
@@ -91,9 +131,9 @@
                         <button class="botao-excluir" type="submit" value="Excluir" name="botao">Excluir</button>
                         <input type="hidden" name="id_pagamento" value="<?php echo @$_REQUEST['id_pagamento'] ?>" />
                     </div>  
-                </div>          
-            </form>
-        </div>
+                </div>           -->
+            </div>
+        </form>
     </main>
 </body>
 
