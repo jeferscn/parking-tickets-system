@@ -9,9 +9,10 @@ body {
 }
 
 img {
-    width: 150px;
-    height: 60px;    
+    width: 100px;
+    height: 60px;
 }
+
 
 /* --------------------------------------------------- TOPBAR ---------------------------------------------------*/
 
@@ -37,12 +38,15 @@ img {
     color: #ffffff;
 }
 
+
 /* #user-icon:hover {
     color: #51F0E5;
     transition: 5s;
 } */
 
+
 /* --------------------------------------------------- SIDEBAR ---------------------------------------------------*/
+
 .sidebar {
     position: fixed;
     width: 250px;
@@ -74,7 +78,8 @@ img {
     transition: all .5s ease;
 }
 
-.a-efeito .active, .a-efeito:hover {
+.a-efeito .active,
+.a-efeito:hover {
     border-left: 5px solid #51F0E5;
     color: #51F0E5;
 }
@@ -93,7 +98,8 @@ img {
     display: none;
 }
 
-label #btn, label #cancel {
+label #btn,
+label #cancel {
     position: absolute;
     cursor: pointer;
     color: white;
@@ -107,18 +113,18 @@ label #btn, label #cancel {
     text-align: center;
     line-height: 45px;
     transition: all .5s ease;
-} 
+}
 
 label #cancel {
     opacity: 0;
     visibility: hidden;
 }
 
-#check:checked ~ .sidebar {
+#check:checked~.sidebar {
     left: 0;
 }
 
-#check:checked ~ label #btn {
+#check:checked~label #btn {
     margin-left: 245px;
     opacity: 0;
     visibility: hidden;
@@ -127,7 +133,8 @@ label #cancel {
 #cadOpcoes {
     background-color: rgb(39, 39, 54);
     /* background-color: rgb(0, 0, 233); */
-    width: 170px;
+    outline: none;
+    height: 65px;
     border: none;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -135,45 +142,72 @@ label #cancel {
     color: #ffffff;
 }
 
+option {
+    line-height: 50px;
+}
+
+
 /* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
 
-@media(max-width: 860px) {.sidebar{
-        height: auto;
-        width: 70px;
-        left: 0;
-        margin: 100px 0;
+@media(max-width: 860px) {
+    .sidebar {
+        display: inline-flex;
+        height: max-content;
+        width: 100vw;
+        height: 30px;
+        margin: 60px auto 0 auto;
+        padding: 30px;
+        background-color: rgb(39, 39, 54);
     }
-
-    header, #btn, #cancel {
+    hr {
         display: none;
     }
-
+    header,
+    #btn,
+    #cancel {
+        display: none;
+    }
     span {
         position: absolute;
         margin-left: 23px;
         opacity: 0;
         visibility: hidden;
     }
-
     .sidebar a {
-        height: 60px;
+        height: 30px;
     }
-
-    .sidebar a i {
-        margin-left: -10px;
-    }
-
     a:hover {
         width: 200px;
-        background: inherit;
     }
-
     .sidebar a:hover span {
         opacity: 1;
         visibility: visible;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 2rem;
     }
-
+    .sidebar .a-efeito {
+        display: inline-flex;
+        justify-content: center;
+        height: 100px;
+        width: 100vw;
+        font-weight: bold;
+        color: white;
+        line-height: 65px;
+        border-left: 0px solid transparent;
+    }
+    .cad-opcoes-mobile {
+        display: none;
+    }
     #cadOpcoes {
-        width: 5px;
+        /* display: none; */
+        outline: none;
+        width: 2vw;
+        height: 30px;
+        border: none;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 1.0em;
+        color: #51F0E5;
     }
-}  
+}

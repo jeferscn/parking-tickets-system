@@ -51,12 +51,18 @@ if (@$_REQUEST['botao'] == "Entrar") {
                         </tr>
                             <div class="card-content-area">
                                 <tr>
-                                    <td class="email">Usuário:</td>
-                                    <td colspan="2"><input type="text" name="login" required placeholder="Login" value="<?php echo @$_POST['login']; ?>"></td>
+                                    <td colspan="2">
+                                        Usuário:
+                                        <br>
+                                        <input type="text" name="login" required placeholder="Login" value="<?php echo @$_POST['login']; ?>">
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td class="senha">Senha:</td>
-                                    <td colspan="2"><input type="password" name="senha" required placeholder="Senha" value="<?php echo @$_POST['idade']; ?>"></td>
+                                    <td colspan="2">
+                                        Senha:
+                                        <br>
+                                        <input type="password" name="senha" required placeholder="Senha" value="<?php echo @$_POST['idade']; ?>">
+                                    </td>
                                 </tr>
                             </div>
                         <tr>

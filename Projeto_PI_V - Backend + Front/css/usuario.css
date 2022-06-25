@@ -21,6 +21,7 @@ input, select {
     border: 1px solid rgb(209, 209, 209);
     outline: 0;
     background: #f2f2f2;
+    width: 10vw;
     margin: 0 0 2px;
     padding: 10px;
     box-sizing: border-box;
@@ -40,6 +41,7 @@ label {
 button {
     background-color: #59E38B;
     color: #000000;
+    width: 10vw;
     padding: 10px 50px;
     border-radius: 5px;
     border: none;
@@ -60,6 +62,10 @@ td {
     color: #ffffff;
 }
 
+table {
+    margin: auto;
+} 
+
 .titulo {
     width: max(500px, 25vw);
     height: 11vh;
@@ -70,7 +76,7 @@ td {
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 50vw;
-    height: 15vh;
+    height: 13vh;
     padding: 20px 0px 150px;
     margin: auto;
     border-radius: 10px;
@@ -81,69 +87,141 @@ td {
 .dados-config {
     display: flex;
     margin: auto;
-    width: 50vw;
+    width: 30vw;
     height: 4vh;
     height: auto;
-    margin-top: 40px;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
+#cadOpcoes {
+    width: 9vw;
+}
+
 /* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
 
-@media(max-width: 1024px) {
+@media(max-width: 1600px) {
     .container-dados-config {
-        height: 20vh;
+        width: 50vw;
+        height: 16vh;
+    }
+    
+    .dados-config {
+        display: flex;
+        margin: auto;
+        width: 50vw;
+        height: 4vh;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 }
 
-@media(max-width: 860px) {.sidebar{
+@media(max-width: 1440px) {
+    input, select {
+        width: 17vw;
+    }
+
+    .container-dados-config {
+        width: 50vw;
+        height: 16vh;
+    }
+    
+    .dados-config {
+        display: flex;
+        margin: auto;
+        width: 50vw;
+        height: 4vh;
         height: auto;
-        width: 70px;
-        left: 0;
-        margin: 100px 0;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+@media(max-width: 1024px) {
+    input, select {
+        width: 17vw;
     }
 
-    header, #btn, #cancel {
-        display: none;
+    .container-dados-config {
+        width: 60vw;
+        height: 16vh;
     }
-
-    span {
-        position: absolute;
-        margin-left: 23px;
-        opacity: 0;
-        visibility: hidden;
+    
+    .dados-config {
+        display: flex;
+        margin: auto;
+        width: 60vw;
+        height: 4vh;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
+}
 
-    .sidebar a {
-        height: 60px;
-    }
-
-    .sidebar a i {
-        margin-left: -10px;
-    }
-
-    a:hover {
-        width: 200px;
-        background: inherit;
-    }
-
-    .sidebar a:hover span {
-        opacity: 1;
-        visibility: visible;
-    } 
+@media(max-width: 860px) {
     /* --------------------------------------------------- MAIN ---------------------------------------------------*/
     main {
-        margin: 0 auto 0 70px;
-        padding-top: 60px;
-        width: 140vw;
+        margin: auto;
+        padding-top: 150px;
         /* background-color: #51F0E5; */
+    }
+
+    input, select {
+        width: 25vw;
+    }
+
+    #cadOpcoes {
+        width: 2vw;
+    }
+
+    .container-dados-config {
+        width: 80vw;
+        height: 16vh;
+    }
+    
+    .dados-config {
+        display: flex;
+        margin: auto;
+        width: 80vw;
+        height: 4vh;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 }
 
-@media(max-width: 360px) {
+@media(max-width: 560px) {
+    /* --------------------------------------------------- MAIN ---------------------------------------------------*/
+    main {
+        margin: auto;
+        padding-top: 150px;
+        /* background-color: #51F0E5; */
+    }
+
+    input, select {
+        width: 25vw;
+    }
+
+    .container-dados-config {
+        width: 85vw;
+        height: 16vh;
+    }
+    
+    .dados-config {
+        display: flex;
+        margin: auto;
+        width: 85vw;
+        height: 4vh;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+/* @media(max-width: 360px) {
     .container-dados-config {
         width: 90vw;
         height: 25vh;
     }
-}
+} */

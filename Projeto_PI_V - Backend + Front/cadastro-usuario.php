@@ -55,15 +55,22 @@ if (@$_REQUEST['botao'] == "Excluir") {
             <form class="form" action="cadastro-usuario.php" method="post" name="usuario">
                 <table width="20%" align="center">
                     <tr>
-                        <td>Login:</td>
-                        <td colspan="2"><input type="text" name="nome" required placeholder="Login" value="<?php echo @$_POST['nome_usuario']; ?>"></td>
-                    </tr>
-                    <td>Email:</td>
-                    <td colspan="2"><input type="email" name="email" maxlength="30" minlength="3" required placeholder="Email" value="<?php echo @$_POST['email']; ?>"></td>
+                        <td colspan="2">
+                            Login:
+                            <input type="text" name="nome" required placeholder="Login" value="<?php echo @$_POST['nome_usuario']; ?>">
+                        </td>
                     </tr>
                     <tr>
-                        <td>Senha:</td>
-                        <td colspan="2"><input type="password" name="senha" maxlength="30" minlength="3" required placeholder="Senha" value="<?php echo @$_POST['senha']; ?>"></td>
+                        <td colspan="2">
+                            Email:
+                            <input type="email" name="email" maxlength="30" minlength="3" required placeholder="Email" value="<?php echo @$_POST['email']; ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Senha:
+                            <input type="password" name="senha" maxlength="30" minlength="3" required placeholder="Senha" value="<?php echo @$_POST['senha']; ?>">
+                        </td>
                     </tr>
                     <tr>
                         <td colspan="2">
@@ -82,8 +89,36 @@ if (@$_REQUEST['botao'] == "Excluir") {
                 </table>
             </form>
 
-            <form class="form" action="cadastro-usuario.php" method="post" name="usuario">                   
-                <label for="">Excluir usuário</label>                                  
+            <form class="form" action="cadastro-usuario.php" method="post" name="usuario">
+                <table width="20%" align="center">
+                    <tr>
+                        <td colspan="2">
+                            Excluir usuário:
+                            <select name="selected_usuario">
+                            <option value="">Selecionar usuário:</option>
+                            <?php
+                            $result_usuarios = "SELECT * FROM usuarios WHERE nivel='Operador' ORDER BY nome_usuario";
+                            $result_verifica_usuarios = mysqli_query($con, $result_usuarios);
+                            while ($result_usuarios = mysqli_fetch_assoc($result_verifica_usuarios)) { ?>
+                                <option value="<?php echo $result_usuarios['nome_usuario']; ?>">
+                                    <?php echo $result_usuarios['nome_usuario']; ?>
+                                </option>
+                            <?php
+                            }
+                            ?>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <button class="botao-excluir" type="submit" value="Excluir" name="botao">Excluir</button>
+                            <input type="hidden" name="id_usuario" value="<?php echo @$_REQUEST['id_usuario'] ?>" />
+                        </td>
+                    </tr>
+
+                </table>                   
+                <!-- <label for="">Excluir usuário</label>                                  
                 <div class="container-excluir">
                     <select name="selected_usuario">
                         <option value="">Selecionar usuário:</option>
@@ -101,7 +136,7 @@ if (@$_REQUEST['botao'] == "Excluir") {
 
                     <button class="botao-excluir" type="submit" value="Excluir" name="botao">Excluir</button>
                     <input type="hidden" name="id_usuario" value="<?php echo @$_REQUEST['id_usuario'] ?>" />
-                    </div>                   
+                    </div>                    -->
             </form>
         </div>
     </div>

@@ -136,61 +136,28 @@ td {
     .container-dados-config {
         display: flex;
     }
-    .container-elementos {
-        width: 50vw;
-        height: 30vw;
-        /* background-color: rgb(177, 233, 214); */
-    }
 }
 
 @media(max-width: 860px) {
-    .sidebar {
-        height: auto;
-        width: 70px;
-        left: 0;
-        margin: 100px 0;
-    }
-    header,
-    #btn,
-    #cancel {
-        display: none;
-    }
-    span {
-        position: absolute;
-        margin-left: 23px;
-        opacity: 0;
-        visibility: hidden;
-    }
-    .sidebar a {
-        height: 60px;
-    }
-    .sidebar a i {
-        margin-left: -10px;
-    }
-    a:hover {
-        width: 200px;
-        background: inherit;
-    }
-    .sidebar a:hover span {
-        opacity: 1;
-        visibility: visible;
-    }
     main {
-        margin: 0 auto 0 70px;
-        padding-top: 60px;
+        margin: auto;
+        padding-top: 150px;
     }
+
+    input {
+        width: 50vw;
+    }
+
     #div-btn {
         margin: 50px 500px -75px;
         background-color: #fac4ff;
     }
+
     .container-dados-config {
+        width: 60vw;
         display: flex;
     }
-    .container-elementos {
-        width: 50vw;
-        height: 30vw;
-        /* background-color: rgb(177, 233, 214); */
-    }
+
     .dados-config {
         width: 20vw;
         height: 0vh;

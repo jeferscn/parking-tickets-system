@@ -41,19 +41,6 @@ select {
     border-radius: 5px;
 }
 
-button {
-    background-color: #59E38B;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-button:hover {
-    background-color: #51F0E5;
-    transition: 0.5s;
-}
-
 h1 {
     font-size: 2.2em;
     margin: 30px 0 0 30px;
@@ -91,6 +78,7 @@ h1 {
 }
 
 .btn-gerar {
+    height: 5vh;
     background-color: #59E38B;
     color: #000000;
     padding: 7px 80px;
@@ -100,8 +88,8 @@ h1 {
 
 .btn-gerar:hover {
     background-color: #51F0E5;
-    transition: 0.5s;
     border: 1px solid #55FAC0;
+    transition: 0.5s;
 }
 
 .btn-saida {
@@ -202,42 +190,10 @@ td:hover {
 }
 
 @media(max-width: 860px) {
-    /* --------------------------------------------------- SIDEBAR ---------------------------------------------------*/
-    .sidebar {
-        height: auto;
-        width: 70px;
-        left: 0;
-        margin: 100px 0;
-    }
-    header,
-    #btn,
-    #cancel {
-        display: none;
-    }
-    span {
-        position: absolute;
-        margin-left: 23px;
-        opacity: 0;
-        visibility: hidden;
-    }
-    .sidebar a {
-        height: 60px;
-    }
-    .sidebar a i {
-        margin-left: -10px;
-    }
-    a:hover {
-        width: 200px;
-        background: inherit;
-    }
-    .sidebar a:hover span {
-        opacity: 1;
-        visibility: visible;
-    }
     /* --------------------------------------------------- MAIN ---------------------------------------------------*/
     main {
         margin: 0 auto 0 70px;
-        padding-top: 60px;
+        padding-top: 150px;
         /* background-color: #51F0E5; */
     }
     .container-filtro {
@@ -254,20 +210,12 @@ td:hover {
         margin-top: 15px;
         /* background-color: #eaff2b; */
     }
-    .btn-gerar {
-        background-color: #59E38B;
-        color: #000000;
-        padding: 7px 80px;
-        border-radius: 5px;
-        border: 1px solid #78F051;
-    }
 }
 
 @media(max-width: 730px) {
     /* --------------------------------------------------- MAIN ---------------------------------------------------*/
     main {
-        margin: 0 auto 0 70px;
-        padding-top: 60px;
+        margin: auto;
         /* background-color: #51F0E5; */
     }
     label {
@@ -290,21 +238,13 @@ td:hover {
         height: 60px;
         margin-top: 15px;
         /* background-color: #eaff2b; */
-    }
-    .btn-gerar {
-        background-color: #59E38B;
-        color: #000000;
-        padding: 7px 80px;
-        border-radius: 5px;
-        border: 1px solid #78F051;
     }
 }
 
 @media(max-width: 580px) {
     /* --------------------------------------------------- MAIN ---------------------------------------------------*/
     main {
-        margin: 0 auto 0 70px;
-        padding-top: 60px;
+        margin: auto;
         /* background-color: #51F0E5; */
     }
     label {
@@ -327,12 +267,5 @@ td:hover {
         height: 60px;
         margin-top: 15px;
         /* background-color: #eaff2b; */
-    }
-    .btn-gerar {
-        background-color: #59E38B;
-        color: #000000;
-        padding: 7px 80px;
-        border-radius: 5px;
-        border: 1px solid #78F051;
     }
 }

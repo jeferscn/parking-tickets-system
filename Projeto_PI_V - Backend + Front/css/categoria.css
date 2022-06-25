@@ -16,9 +16,14 @@ main {
     padding-top: 60px;
 }
 
+table {
+    margin: auto;
+}
+
 input, select {
     border: 1px solid rgb(209, 209, 209);
     outline: 0;
+    width: 10vw;
     background: #f2f2f2;
     margin: 0 0 2px;
     padding: 10px;
@@ -39,7 +44,10 @@ label {
 button {
     background-color: #59E38B;
     color: #000000;
-    padding: 10px 50px;
+    width: 10vw;
+    height: 4vh;
+    margin-top: 10px;
+    padding: 10px 72px;
     border-radius: 5px;
     border: none;
 }
@@ -68,8 +76,8 @@ td {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 30vw;
-    height: 25vh;
+    width: 20vw;
+    height: 12vh;
     padding: 20px 0px 150px;
     margin: auto;
     border-radius: 10px;
@@ -103,77 +111,70 @@ td {
     /* background-color: #b8f051; */
 }
 
+#cadOpcoes {
+    width: 9vw;
+}
+
 /* --------------------------------------------------- RESPONSIVIDADE ---------------------------------------------------*/
 
 @media(max-width: 1600px){
     .container-dados-config {
-        width: 40vw;
+        width: 30vw;
+        height: 14vh;
     }
 
     .dados-config {
         width: 30vw;
         /* background-color: cadetblue */
     }
+
+    input, select {
+        width: 15vw;
+    }
+
+    button {
+        width: 15vw;
+    }
 }
 
 @media(max-width: 1024px){
     .container-dados-config {
-        width: 60vw;
+        width: 50vw;
     }
 
     .dados-config {
         width: 55vw;
         /* background-color: cadetblue */
     }
+
+    input, select {
+        width: 20vw;
+    }
+
+    button {
+        width: 20vw;
+    }
 }
 
 @media(max-width: 860px) {
-    /* --------------------------------------------------------------SIDEBAR--------------------------------------------------------------- */
-    .sidebar{
-        height: auto;
-        width: 70px;
-        left: 0;
-        margin: 100px 0;
-    }
-
-    header, #btn, #cancel {
-        display: none;
-    }
-
-    span {
-        position: absolute;
-        margin-left: 23px;
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .sidebar a {
-        height: 60px;
-    }
-
-    .sidebar a i {
-        margin-left: -10px;
-    }
-
-    a:hover {
-        width: 200px;
-        background: inherit;
-    }
-
-    .sidebar a:hover span {
-        opacity: 1;
-        visibility: visible;
-    }
     /* --------------------------------------------------- MAIN ---------------------------------------------------*/
     main {
-        margin: 0 auto 0 70px;
-        padding-top: 60px;
+        margin: auto;
+        padding-top: 150px;
         /* background-color: yellowgreen; */
+    }
+
+    input, select {
+        width: 30vw;
+    }
+
+    button {
+        width: 30vw;
     }
     
     .container-dados-config {
-        width: 70vw;
-        margin-right: 120px;
+        width: 60vw;
+        margin-right: 135px;
     }
 
     .dados-config {
@@ -181,25 +182,21 @@ td {
         width: 60vw;
         /* background-color: cadetblue */
     }
+
+    #cadOpcoes {
+        width: 2vw;
+    }
 }
 
 @media(max-width: 740px) {
     /* --------------------------------------------------- MAIN ---------------------------------------------------*/
     main {
-        margin: 0 auto 0 70px;
-        padding-top: 60px;
+        margin: auto;
     }
     
     .container-dados-config {
         width: 70vw;
-        margin-left: 55px;
-    }
-
-    .dados-config {
-        margin-right: 90px;
-        padding: 10px;
-        width: 50vw;
-        /* background-color: cadetblue */
+        margin: auto;
     }
 
     .btn-container {
@@ -208,25 +205,26 @@ td {
         height: 6vh;
         /* background-color: #b8f051; */
     }
+
+    input, select {
+        width: 30vw;
+    }
+
+    button {
+        width: 30vw;
+    }
 }
 
 @media(max-width: 540px) {
     /* --------------------------------------------------- MAIN ---------------------------------------------------*/
     main {
-        margin: 0 auto 0 70px;
-        padding-top: 60px;
+        margin: auto;
     }
     
     .container-dados-config {
         width: 70vw;
-        height: 37vh;
-        margin-left: 45px;
-    }
-
-    .dados-config {
-        margin-right: 200px;
-        width: 10vw;
-        /* background-color: cadetblue */
+        height: 14vh;
+        margin: auto;
     }
 
     .btn-container {
@@ -235,20 +233,34 @@ td {
         height: 6vh;
         /* background-color: #b8f051; */
     }
+
+    input, select {
+        width: 40vw;
+    }
+
+    button {
+        width: 40vw;
+    }
 }
 
 @media(max-width: 360px) {
     /* --------------------------------------------------- MAIN ---------------------------------------------------*/
     main {
-        margin: 0 0 0 70px;
-        width: 130vw;
-        padding-top: 60px;
+        margin: auto;
         /* background-color: #51F0E5; */
     }
     
     .container-dados-config {
         width: 90vw;
-        height: 37vh;
-        margin-left: 75px;
+        height: 14vh;
+        margin: auto;
+    }
+
+    input, select {
+        width: 50vw;
+    }
+
+    button {
+        width: 50vw;
     }
 }  

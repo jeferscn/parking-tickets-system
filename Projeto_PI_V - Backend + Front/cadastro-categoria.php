@@ -62,8 +62,40 @@
             <h1>Cadastrar Categoria</h1>
         </div>
         <div class="container-dados-config">
-            <form class="form" action="cadastro-categoria.php" method="POST" name="categoria">          
-                <div class="dados-config">
+            <form class="form" action="cadastro-categoria.php" method="POST" name="categoria">
+                <table width="20%" align="center">
+                    <tr>
+                        <td colspan="2">
+                            Categoria:
+                            <input type="text" name="categoria" placeholder="Categoria" value="<?php echo @$_POST['categoria']; ?>">
+                            <button class="submit-button" type="submit" value="Gravar" name="botao">Gravar</button>
+                            <input type="hidden" name="id_categoria" value="<?php echo @$_REQUEST['id_categoria'] ?>" />
+                        </td>
+                    </tr>
+                </table>
+                <table width="20%" align="center">
+                    <tr>
+                        <td colspan="2">
+                            Excluir categoria:
+                            <select name="selected_categoria">
+                                <option value="">Selecionar categoria</option>
+                                <?php
+                                $result_usuarios = "SELECT * FROM categorias ORDER BY nome_categoria";
+                                $result_verifica_usuarios = mysqli_query($con, $result_usuarios);
+                                while ($result_usuarios = mysqli_fetch_assoc($result_verifica_usuarios)) { ?>
+                                    <option value="<?php echo $result_usuarios['nome_categoria']; ?>">
+                                        <?php echo $result_usuarios['nome_categoria'] ?>
+                                    </option>
+                                <?php
+                                }
+                                ?>
+                            </select>
+                            <button class="botao-excluir" type="submit" value="Excluir" name="botao">Excluir</button>
+                            <input type="hidden" name="id_categoria" value="<?php echo @$_REQUEST['id_categoria'] ?>" />
+                        </td>
+                    </tr>
+                </table>
+                <!-- <div class="dados-config">
                     <div class="container-categoria">
                         <label for="">Categoria:</label>
                         <input type="text" name="categoria" placeholder="Categoria" value="<?php echo @$_POST['categoria']; ?>">
@@ -73,9 +105,9 @@
                         <button class="submit-button" type="submit" value="Gravar" name="botao">Gravar</button>
                         <input type="hidden" name="id_categoria" value="<?php echo @$_REQUEST['id_categoria'] ?>" />
                     </div>
-                </div>
+                </div> -->
 
-                <div class="dados-config">
+                <!-- <div class="dados-config">
                     <div class="container-categoria">
                         <label for="">Excluir categoria:</label>
                         <select name="selected_categoria">
@@ -97,7 +129,7 @@
                         <button class="botao-excluir" type="submit" value="Excluir" name="botao">Excluir</button>
                         <input type="hidden" name="id_categoria" value="<?php echo @$_REQUEST['id_categoria'] ?>" />
                     </div>
-                </div>
+                </div> -->
             </form>
         </div>
     </main>

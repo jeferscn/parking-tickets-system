@@ -45,18 +45,17 @@ while ($valor = mysqli_fetch_assoc($result)) {
             </div>
             <div class="container-dados-vagas" fixed>
                 <div class="dados-vagas">
-                    <i class="fas fa-map-marker-alt" id="vagas-icon"></i>
-                    <p>Total de vagas disponíveis:</p>
+                    <p>Total de vagas disponíveis</p>
                     <div class="valor-total">
-                        <strong><?php echo $total_vagas - $qtd_veiculos_estacionados ?></strong>
+                        <strong><i class="fas fa-map-marker-alt"></i><?php echo $total_vagas - $qtd_veiculos_estacionados ?></strong>
                     </div>
                 </div>
 
                 <div class="dados-vagas">
-                    <i class="fas fa-times-circle" id="vagas-icon"></i>
-                    <p>Total de vagas ocupadas:</p>
+                    
+                    <p>Total de vagas ocupadas</p>
                     <div class="valor-total">
-                        <strong><?php echo " $qtd_veiculos_estacionados" ?></strong>
+                        <strong><i class="fas fa-times-circle"></i><?php echo $qtd_veiculos_estacionados ?></strong>
                     </div>
                 </div>
             </div>

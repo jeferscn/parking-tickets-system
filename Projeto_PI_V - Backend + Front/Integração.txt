@@ -2,12 +2,12 @@ Integração:
 
 08/06/22 > Efetudo a integração da tela de login do front com o back, assim como o CSS
          > Acrescentado a pasta CSS no projeto do back
-	 > Acrescentado a pasta img no projeto do back
+	   > Acrescentado a pasta img no projeto do back
 
 15/06/22 > diminuido o tamanho da fonte da sidebar.
          > alterado css da tela de login
-	 > organizado o código css da tela de login
-	 > inserido a sidebar na tela de configurações
+	   > organizado o código css da tela de login
+	   > inserido a sidebar na tela de configurações
          > ajustado o conteúdo main da tela configurações
          > Acrescentado a sidebar na tela de categorias
          > Acrescentado o css da tela de categorias
@@ -19,24 +19,50 @@ Integração:
          > identado trechos de códigos de todos os arquivos.php
          > ajustado título de Painel e também a div dos totalizadores de vagas.
          > ajustado e customizado os elementos da tela de entrada.
-	 > ajustado e customizado os elementos da tela de configurações.
-	 > ajustado e customizado os elementos da tela de cadastrar categoria.
-	 > ajustado e customizado os elementos da tela de cadastrar usuário.
-	 > embaçado o bg da tela login, ajustado label Usuário.	
+         > ajustado e customizado os elementos da tela de configurações.
+         > ajustado e customizado os elementos da tela de cadastrar categoria.
+         > ajustado e customizado os elementos da tela de cadastrar usuário.
+         > embaçado o bg da tela login, ajustado label Usuário.	
          > ajustado a topbar, função e nome do usuário
          > ajustado e customizado os elementos da tela de saídas.
          > editado os totalizadores de vagas no painel
 
 17/06/22 > ajustado a responsividade de quase todas as telas
 
-20/06 > corrigido o subtítulo da página cadastrar usuário
-      > inserido o select para cadastros na sidebar
-      > ajustado o css da opção de cadastros na sidebar reduzida (tela menor)
-      > retirado a div de dashboard da home page
-      > alterado o CSS dos inputs da tela de LOGIN
-      > ajustado os elementos em forma de table da tela Cadastrar Pagamento
-      > ajustado a responsividade da tela Cadastrar Pagamento
-      > alterado o media querie 360px (height da div) da tela de usuários
+20/06/22 > corrigido o subtítulo da página cadastrar usuário
+         > inserido o select para cadastros na sidebar
+         > ajustado o css da opção de cadastros na sidebar reduzida (tela menor)
+         > retirado a div de dashboard da home page
+         > alterado o CSS dos inputs da tela de LOGIN
+         > ajustado os elementos em forma de table da tela Cadastrar Pagamento
+         > ajustado a responsividade da tela Cadastrar Pagamento
+         > alterado o media querie 360px (height da div) da tela de usuários
+
+21/06/22 > ajustado a responsividade da tela de configurações
+         > ajustado a responsividade da tela de login
+         > ajustado a responsividade da tela de pagamentos
+         > alterado html da tela de configurações 
+         > alterado o html da tela de login
+         > ajustado a responsividade da tela de saidas  
+         > ajustado o select da sidebar com o id cadOpcoes no arquivo CSS de pagamento, usuario, entrada e saida
+         > ajustado o select da sidebar quando reduzido de tamanho da tela  
+         > ajustado a LOGO na sidebar
+
+22/06/22 > alterado o CSS da tela de entradas para deixar os elementos mais organizados
+         > ajustado a responsividade da tela de entrada
+         > alterado os elementos da tela de entrada na parte de HTML, mudados para uma table
+         > ajustado o css da sidebar quando entra em 860px para responsividade
+         > ajustado o subtítulo de todas as páginas devido a alteração da sidebar quando entra em 860px
+         > ajustado a responsividade geral da tela HOME
+         > ajustado a responsividade da tela de saidas até 540px apenas
+         > ajustado a responsividade da tela de configurações
+         > ajustado a responsividade da tela de categoria (menos mobile)
+         > ajustado a responsividade da tela de pagamento (menos mobile)
+         > ajustado a responsividade da tela de usuario (menos mobile)
+         > acrescentado o subtítulo na tela de saidas ao clicar no botão 'saida'
+         > arrumado o SELECT da SIDEBAR ao diminuir de tamanho quando entra em 860px (antes não estava funcionando)
+         > ajustado um pouco o tamanho do select ao diminuir as telas (algumas telas ele vai diminuindo junto e não fica estático como na home)
+         > inserido tag <a> na LOGO para que ao clicar sobre ela, o usuário é direcionado até a tela de PAINEL
 
 OBS: todos os arquivos .php respectivos foram ajustados ou identados de acordo com a necessidade de css.
         

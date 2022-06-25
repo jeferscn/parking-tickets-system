@@ -23,7 +23,9 @@
     <title>Entrada</title>
 </head>
 <div class="topbar">
-    <img src="img/corp.jpg" alt="logo marca">
+    <a href="index.php">
+        <img src="img/corp.jpg" alt="logo marca">
+    </a>
     <div id="user-name">
         <?php echo "[" . @$nivel . "] " . @$login;  ?>
     </div>
@@ -58,7 +60,7 @@
             <i class="fas fa-cog"></i>
             <span>configurações</span>
         </a>
-        <a class="a-efeito">
+        <a class="a-efeito cad-opcoes-mobile">
             <i class="fas fa-clipboard-list"></i>
             <select name="cadastrar" id="cadOpcoes" onchange="location = this.value;">
                 <option value="" selected> cadastros </option>
